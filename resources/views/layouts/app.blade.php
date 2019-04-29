@@ -26,10 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 
-                <a class="navbar-brand" href="{{ url('/') }}" style="@font-face {
-                    font-family: 'Balloons';
-                    src: url('{{ public_path('fonts/Balloons.ttf') }}');
-                }">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'melon') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
