@@ -1,3 +1,7 @@
+body{
+    background: #fff;
+    font-family: 'Roboto',sans-serif;
+}
 .card-header{
     background: linear-gradient(to left,#833ab4,#fd1d1d);
     border-top-left-radius: 50%;
@@ -6,12 +10,8 @@
     color: #fff;
     
 }
-body{
-    background: #fff;
-    font-family: 'Roboto',sans-serif;
-}
-.col-sm-4 > h1{
-    text-align: center;
+.card{
+    margin-top: 60px;
 }
 .btn-primary:focus,
 .btn-primary:hover{
@@ -27,5 +27,42 @@ body{
 .navbar-brand{
     font-weight: bold;
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 25px;
+    transition: transform 0.5s;
 }
+.navbar-brand:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+.textname
+{
+    position:absolute;
+    top:40%;
+}
+.motto{
+    position: absolute;
+    top:70%;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 40px;
+    font-family: 'Quicksand', sans-serif;
+}
+.text{
+
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    text-shadow: 2px 2px rgba(59, 56, 56, 0.171);
+}
+.bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: linear-gradient(to left, #833ab4,#fd1d1d);
+    width: 100%;
+    height: 1px;
+}
+@media screen and (max-width: 768px){
+    .col-sm-4{
+        display: none;
+    }
+ }
