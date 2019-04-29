@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Online Store</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <!--icons link-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark nav-color fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="index.html"><i class="fas fa-store"> </i> Online Store</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Offered Adverts</a>
+              </li>
+             <li class="nav-item">
+                <a href="register.html"><button type="button" class=" btn btn-color text-white"><i class="fas fa-plus"></i> POST ADD</button></a>
+             </li>
+              <li class="nav-item">
+                  <div class="dropdown">
+                    <div class="myprofilebtn">
+                      <i class="fas fa-user user-icon-color"></i>
+                      <button type="button"  class="btn-shift btn dropdown-toggle text-light" data-toggle="dropdown">
+                       My Profile
+                      </button>
+                    
+                      <div class="dropdown-menu profile-icon">
+                        <h5 class="dropdown-header">Personal</h5>
+                        <a class="dropdown-item" href="#"><i class="fas fa-cart-plus"></i> My Basket</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Setting</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#myModal"><i class="fas fa-key"></i> Log Out</a>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--modal for logout-->
+      
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Leave</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+             <h5> Are you going to Leave? So earlier?</h5>
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Leave</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+    
+    
+
+        <header class=" text-white filters">
+
+            <div class="container text-center">
+              <h1>Welcome to Our Online Store</h1>
+              <p class="lead">Here you can find anything due to you wishes</p>
+              <div>
+                
+                  <form action="#" method="post" novalidate="novalidate">
+                    <div class="row">
+                                     
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Item you want to seach..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <select class="custom-select" id="inputGroupSelect04">
+                              <option selected>Choose region</option>
+                              <option value="1">Tashkent</option>
+                              <option value="2">Andijan</option>
+                              <option value="3">Bukhara</option>
+                              <option value="4">Navai</option>
+                            </select>
+                            <div class="input-group-append">
+                              <button class="btn btn-success" type="button">Search</button>
+                            </div>
+                          </div>
+               
+                  </div>
+                </form>
+                <div class="category"></div>
+               
+                <div class="row item">
+               
+                  <div class="col item-1">
+                    <div class="item-group pointer">
+                      
+                    <h6 data-toggle="collapse" href="#collapseExample"><i class="fa fa-cloud"></i> Electronics</h6> 
+                  </div>
+                </div>
+                <div class="collapse row z-indexing" id="collapseExample">
+                    <div class="card card-body category-info">
+                      <div class="row">
+                      <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">First item</a>
+                            <a href="#" class="list-group-item list-group-item-action">Second item</a>
+                            <a href="#" class="list-group-item list-group-item-action">Third item</a>
+                          </div>
+                        </div> 
+                    </div>
+                </div>
+        
+                <div class="col item-1">
+                    <div class="item-group pointer">
+                      
+                      <h6><i class="fa fa-cloud"></i> Gardern</h6>
+        
+                  </div>
+                </div>
+        
+                <div class="col item-1">
+                    <div class="item-group pointer">
+                    
+                      <h6>  <i class="fas fa-tshirt"></i> Clothes </h6>
+                  </div>
+                </div>
+        
+                <div class="col item-1">
+                    <div class="item-group pointer">
+                     
+                      <h6><i class="fas fa-concierge-bell"></i> Services </h6>
+                  </div>
+                </div>
+                
+                </div>
+        
+                <div class="row item">
+                    <div class="col item-1">
+                        <div class="item-group pointer">
+                         
+                        <h6 data-toggle="collapse" href="#collapseExamples"><i class="fas fa-child"></i> Children</h6> 
+                      </div>
+                    </div>
+                    <div class="collapse row z-indexing" id="collapseExamples">
+                        <div class="card card-body category-info">
+                          <div class="row">
+                          <div class="list-group col">
+                                <a href="#" class="list-group-item list-group-item-action">First item</a>
+                                <a href="#" class="list-group-item list-group-item-action">Second item</a>
+                                <a href="#" class="list-group-item list-group-item-action">Third item</a>
+                              </div>
+                              <div class="list-group col">
+                                <a href="#" class="list-group-item list-group-item-action">First item</a>
+                                <a href="#" class="list-group-item list-group-item-action">Second item</a>
+                                <a href="#" class="list-group-item list-group-item-action">Third item</a>
+                              </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col item-1">
+                        <div class="item-group pointer">
+                          <i class="fas fa-home"></i>
+                          <h6> Home Real Estate</h6>
+                      </div>
+                    </div>
+                    <div class="col item-1">
+                        <div class="item-group pointer">
+                         
+                          <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
+                      </div>
+                    </div>
+                    <div class="col item-1">
+                        <div class="item-group pointer">
+                         
+                          <h5> <i class="fas fa-car"></i>  Cars </h5>
+                      </div>
+                    </div>
+                  </div>
+        
+              </div>
+        
+            </div>
+        
+            
+          </header>
+
+  
+
+ <!--section service use it in proper way-->
+  <section id="services" class="bg-light">
+
+    <div class="container"> 
+      <div class="row">
+        <div class="col">
+          <div class="panel-col" style="backgound:blue; margin-top:16%;">
+            <figure class="figure">
+                <img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/20479841_1880984015561754_5620100286034227693_n.jpg?_nc_cat=107&_nc_ht=scontent-arn2-2.xx&oh=70f1bf89fb3ca9155b17ff6cb9470c28&oe=5D2EBA93" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">get it right now!</figcaption>
+              </figure>
+        </div>
+      </div>
+
+        <div class="col-lg-8 mx-auto">
+
+            <h1 class="">Top Advertisement</h1>
+          <div class="card mb-3 boxing" style="max-width: 740px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="http://cdn.motorpage.ru/Photos/800/184.jpg" class="card-img img-product" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Nexia<span id="value-product-list">1,200,000 so'm</span></h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted"><i class="fas fa-thumbtack"></i>Mirzo Ulugbek rg, Olimlar street</small><small><i style="color:burlywood; padding-left: 10%;" class="fas fa-history"></i>Time: 29/02/2019</small><span style="float:right; font-size:15pt;"><i class="far fa-heart"></i></span></p>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="card mb-3  boxing" style="max-width: 740px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://images-na.ssl-images-amazon.com/images/G/01//pc/ac/pc_ac_landing_laptops-acer.jpg" class="card-img img-product" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <div class="card mb-3  boxing" style="max-width: 740px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://www.bhphotovideo.com/images/images2500x2500/panasonic_lumix_dmc_fz2500_digital_camera_1280827.jpg" class="card-img img-product" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="card mb-3  boxing" style="max-width: 740px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="https://www.gigaset.com/media/catalog/product/0/3/03_smartphone_gigaset_gs370_jetblack_tl_topview_lake.jpg" class="card-img img-product" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 nav-color text-white">
+
+    
+    <div class="container-fluid">
+       <div class="row">
+        <div class="flex-fill">
+          <h1>Our Partners</h1>
+         <ul>
+           <li>
+               <i class="fab fa-facebook"></i>
+           </li>
+           <li>
+               <i class="fab fa-facebook"></i>
+             </li>
+             <li>
+                 <i class="fab fa-facebook"></i>
+               </li>
+               <li>
+                   <i class="fab fa-facebook"></i>
+                 </li>
+         </ul>
+         </div>
+         <div class="flex-fill">
+             <h1>Send FeedBack</h1>
+          
+             <div class="feedback">
+                <form action="post">
+                <label for="email"><i class="fas fa-envelope-open-text"></i> Email address</label>
+                  <input type="email" class="form-control" id="email">
+                  <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <br>
+                <button type="submit" class="btn btn-outline-secondary" style="float:left">Send Message</button>
+              </form>  
+             </div> 
+              
+           
+       </div>
+        
+   </div>
+  <div class="container">
+    
+       <p class="m-0 text-center text-white" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+    
+     </div>
+   <!-- /.container -->
+ </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
