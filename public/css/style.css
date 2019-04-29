@@ -1,0 +1,31 @@
+.card-header{
+    background: linear-gradient(to left,#833ab4,#fd1d1d);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    text-align: center;
+    color: #fff;
+    
+}
+body{
+    background: #fff;
+    font-family: 'Roboto',sans-serif;
+}
+.col-sm-4 > h1{
+    text-align: center;
+}
+.btn-primary:focus,
+.btn-primary:hover{
+    background: linear-gradient(to right, #833ab4,#fd1d1d);
+}
+.btn-primary{
+    background: linear-gradient(to left, #833ab4,#fd1d1d);
+    border: none;
+}
+.navbar-laravel{
+    background: #fff;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
