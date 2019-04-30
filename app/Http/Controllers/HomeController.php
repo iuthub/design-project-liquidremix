@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Custom\ExchangeRate;
 class HomeController extends Controller
 {
     /**
@@ -23,10 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        return view('home.index',['rate'=>ExchangeRate::getRates()]);
     }
     public function getUserCreate()
     {
-        return view('home.create');
+        return view('home.create',['rate'=>ExchangeRate::getRates()]);
     }
 }
