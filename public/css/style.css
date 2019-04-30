@@ -26,6 +26,7 @@ body{
 }
 .navbar-laravel{
     background: #fff;
+    box-shadow: 0.5px 0.5px 80px lightgray;
     
 }
 .navbar-brand{

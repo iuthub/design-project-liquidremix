@@ -2,8 +2,8 @@
 @section('content')
 <header class=" text-white filters">
     <div class="container text-center">
-      <h1>Welcome to Our Online Store</h1>
-      <p class="lead">Here you can find anything due to you wishes</p>
+      <h1 class="text">{{ config('app.name','melon') }}</h1>
+      <p class="lead">Find anything, sell anything</p>
       <div>
           <form action="#" method="post" novalidate="novalidate">
             <div class="row">
