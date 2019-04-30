@@ -1,5 +1,6 @@
 body{
-   
+    background: #fff;
+    font-family: 'Roboto',sans-serif;
 }
 .card-header{
     background: linear-gradient(to left,#833ab4,#fd1d1d);
