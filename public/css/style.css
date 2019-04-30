@@ -10,7 +10,7 @@ body{
     color: #fff;
     
 }
-.card{
+.auth{
     margin-top: 60px;
     border-left-color: #fd1d1d;;
     border-right-color: #833ab4;
@@ -26,6 +26,7 @@ body{
 }
 .navbar-laravel{
     background: #fff;
+    box-shadow: 0.5px 0.5px 80px lightgray;
     
 }
 .navbar-brand{
