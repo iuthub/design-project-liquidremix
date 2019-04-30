@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [
+    'uses'=>'LandingPageController@getIndex',
+    'as'=>'index'
+]);
 
 Auth::routes();
 

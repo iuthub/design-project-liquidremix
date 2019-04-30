@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
@@ -39,7 +40,8 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="navbar-text">1 USD={{ $rate }} UZS</span>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -53,6 +55,7 @@
                                 </li>
                             @endif
                         @else
+                                
                                 @if (Auth::user())
                                     <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                                 @endif
