@@ -9,7 +9,7 @@
                     @include('partials.logo')
                 </div>
                 <div class="col-sm-8">
-                    <div class="card">
+                    <div class="card auth">
                         <div class="card-header">{{ __('Register') }}</div>
 
                         <div class="card-body">
