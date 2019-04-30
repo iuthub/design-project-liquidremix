@@ -49,7 +49,16 @@
                                         @endif
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="phone_number"
+                                        class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
+                                    <div class="col-md-6">
+                                        <input id="phone_number" type="text"
+                                            class="form-control"
+                                            name="phone_number" required>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="password"
                                         class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
