@@ -1,6 +1,5 @@
 body{
-    background: #fff;
-    font-family: 'Roboto',sans-serif;
+   
 }
 .card-header{
     background: linear-gradient(to left,#833ab4,#fd1d1d);
@@ -10,7 +9,7 @@ body{
     color: #fff;
     
 }
-.card{
+.auth{
     margin-top: 60px;
     border-left-color: #fd1d1d;;
     border-right-color: #833ab4;

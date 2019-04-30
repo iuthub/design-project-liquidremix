@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -85,9 +86,58 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
+
     </div>
+    <footer class="py-5 nav-color text-white">
+
+    
+            <div class="container-fluid">
+               <div class="row">
+                <div class="flex-fill">
+                  <h1>Our Partners</h1>
+                 <ul>
+                   <li>
+                       <i class="fab fa-facebook"></i>
+                   </li>
+                   <li>
+                      <i class="far fa-paper-plane"></i>
+                     </li>
+                     <li>
+                         <i class="fab fa-facebook"></i>
+                       </li>
+                       <li>
+                           <i class="fab fa-facebook"></i>
+                         </li>
+                 </ul>
+                 </div>
+                 <div class="flex-fill">
+                     <h1>Send FeedBack</h1>
+                  
+                     <div class="feedback">
+                        <form action="post">
+                        <label for="email"><i class="fas fa-envelope-open-text"></i> Email address</label>
+                          <input type="email" class="form-control" id="email">
+                          <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-outline-secondary" style="float:left">Send Message</button>
+                      </form>  
+                     </div> 
+                      
+                   
+               </div>
+                
+           </div>
+          <div class="container">
+            
+               <p class="m-0 text-center text-white" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+            
+             </div>
+           <!-- /.container -->
+         </footer>
+        
 </body>
 </html>
