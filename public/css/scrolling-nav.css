@@ -41,7 +41,7 @@ color:rgb(223, 223, 223);
   background-color: rgba(81, 81, 82, 0.534);
 }
 .item-1:hover{
-  background-color:rgb(233, 0, 0)
+  background-color:rgb(0, 148, 91)
 }
 
 .category{
@@ -52,11 +52,14 @@ color:rgb(223, 223, 223);
 .item-group{
 display: inline-flex;
 position: relative;
-top:15%;
+top:18%;
 left:5%;
 }
 .pointer {
   cursor: pointer;
+  font-size: 16pt;
+  font-weight: 500;
+  color:rgb(203, 203, 214);
 }
 /*------Navbar section------*/
 .user-icon-color{
@@ -70,7 +73,7 @@ left:5%;
   padding-left: 0;
 }
 .nav-color{
-  background-color: rgba(22, 21, 21, 0.918);
+  background-color: rgba(212, 209, 209, 0.918);
   }
 /*------Card section------*/
 .box img{
@@ -233,4 +236,24 @@ background-color: rgb(182, 182, 182);
  padding-top: 2.5%;
  padding-left: 2.5%;
  font-weight: 400;
+}
+.social ul li{
+  display: inline-block;
+  
+  font-size: 20pt;
+  list-style: none;
+  padding:10px;
+}
+
+.item-list{
+  list-style: none;
+  color: rgb(126, 126, 126);
+}
+
+.item-list ul li a{
+  color:rgb(196, 196, 196);
+  text-decoration: none;
+}
+.item-list ul li a:hover{
+  color:rgb(114, 111, 111);
 }

@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-laravel">
             <div class="container">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -88,6 +88,38 @@
         </main>
 
     </div>
-        
+    <footer class="py-5 nav-color text-white">
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="flex-fill">
+           <div class="item-list">
+            <ul>
+              
+                 <li><a href="">About Us</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Privacy and policy</a></li>
+             
+            </ul>
+          
+           </div>
+           <div class="social">
+                <h4>social links</h4>
+            <ul>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-telegram"></i></li>
+                <li> <i class="fab fa-instagram"></i></li>
+            </ul>
+         </div>  
+        </div>
+            <div class="flex-fill flex">
+            <p class="m-0 text-center" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+            </div>
+        </div>
+         
+         </div>
+       
+       <!-- /.container -->
+     </footer>
 </body>
 </html>
