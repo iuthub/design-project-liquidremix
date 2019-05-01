@@ -92,7 +92,7 @@
 
       <div class="container-fluid">
         <div class="row">
-            <div class="flex-fill">
+            <div class="col">
            <div class="item-list">
             <ul>
               
@@ -103,18 +103,31 @@
             </ul>
           
            </div>
-           <div class="social">
-                <h4>social links</h4>
-            <ul>
-                <li><i class="fab fa-facebook"></i></li>
-                <li><i class="fab fa-telegram"></i></li>
-                <li> <i class="fab fa-instagram"></i></li>
-            </ul>
-         </div>  
         </div>
-            <div class="flex-fill flex">
-            <p class="m-0 text-center" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+        <div class="col">
+           <!-- <div class="social text-center">
+                <h4> Social links</h4>
+                <ul>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-telegram"></i></li>
+                    <li> <i class="fab fa-instagram"></i></li>
+                </ul>
+            
+             <p class="m-0" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+            </div> -->
+            
+            <div class="social text-center">
+                <h4>Find us on Social Link</h4>
+                <p><span id="icon-footer"><i class="fab fa-facebook"></i></span>
+                <span id="icon-footer"><i class="fab fa-telegram"></i></span>
+                <span id="icon-footer"> <i class="fab fa-instagram"></i></span>
+            </p>
+            <p class="m-0" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+          
             </div>
+        </div>
+        <div class="col"></div>
+
         </div>
          
          </div>

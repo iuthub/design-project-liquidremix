@@ -126,7 +126,7 @@
                  </ol>
                  <div class="carousel-inner">
                    <div class="carousel-item active">
-                     <img src="https://www.digitaltigers.com/images/feature/ultraview-desktop-manager-v2-software-create-your-workspace.jpg" class="d-block w-100" alt="...">
+                     <img src="http://www.raincloudmagic.com/wp-content/uploads/2011/09/propsheader-1000x300.jpg" class="d-block w-100" alt="...">
                      <div class="carousel-caption d-none d-md-block">
                        <h5>First slide label</h5>
                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
