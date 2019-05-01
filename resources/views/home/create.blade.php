@@ -1,89 +1,88 @@
 @extends('layouts.app')
 @section('content')
-
+@include('partials.errors')
 <section id="services" class="bg-light">
-        <div class="container">
-        
-              <nav aria-label="breadcrumb" class="nav-route">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data</li>
-                  </ol>
-                </nav>
-          
-                <div class="row">
-                    <h2 class="text-center">Post your Adverts in Your timeline</h2><hr>
-                </div>
-          <div class="row">
-        
-              <div class="col">
-                <div class="card">
-              
-               <div class="card-body col-8">
-                   <div class="card-title">
-                        <form>
-                                <div class="form-group">
-                                  <label for="formGroupExampleInput">Sarlavha</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput"  placeholder="Example input" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                </div>
-                                <div class="form-group">
-                                  <label for="formGroupExampleInput2">Category</label>
-                                  <select class="form-control" id="exampleFormControlSelect1" placeholder="choose...">
-                                    <option value="1">choose...</option>
-                                    <option value="#">Children</option>
-                                    <option value="#">Gardern</option>
-                                    <option value="#">Fashion</option>
-                                    <option value="#">Service</option>
-                                    <option value="#">Car</option>
-                                    <option value="#">Electronics</option>
-                                  </select>
-                                </div>
-                          
-                                <div class="form-group">
-                                        <legend for="formGroupExampleInput3">Definition</legend>
-                                        <textarea rows="4" cols="63"></textarea><br><small>white your def.</small>
-                                </div>
-                                <div class="form-group">
-                                        <legend for="formGroupExampleInput4">UPLOAD PRODUCT PHOTOS</legend>
-                                       
-                                            <div class="col-4">
-                                        <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                                <label class="custom-file-label" for="customFileLangHTML" data-browse="photo">upload via computer</label>
-                                              </div>
-    
-                                              <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                                    <label class="custom-file-label" for="customFileLangHTML" data-browse="photo">upload via computer</label>
-                                                  </div>
-                                                  
-                                              <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                                    <label class="custom-file-label" for="customFileLangHTML" data-browse="photo">upload via computer</label>
-                                                  </div>
-                                                  
-                                              <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                                    <label class="custom-file-label" for="customFileLangHTML" data-browse="photo">upload via computer</label>
-                                                  </div>
-                                            </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <legend>Contact infomation</legend>
-                                                <label class=""></label>
-                                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                              
-                                            </div>
-                                            <button type="submit" class="btn btn-outline-primary">POST</button>
-    
-                              </form>    
-                  
-                  </div>
-               </div>
-           </div>
-              </div>
-          </div>
+    <div class="container">
+
+        <nav aria-label="breadcrumb" class="nav-route">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Your profile</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Your ads</a></li>
+                <li class="breadcrumb-item active" aria-current="page">New ad</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <h2 class="text-head">Post your advertisement to <span class="text-reg">melon</span></h2>
+            <hr>
         </div>
-      </section>
+        <div class="row">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body col-8">
+                        <div class="card-title">
+                          <form method="POST" action="{{ route('home.create') }}">
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" name="title" class="form-control" id="title" 
+                                        placeholder="Title of the ad" data-toggle="popover"
+                                        data-placement="right">
+                                </div>
+                                <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <select class="form-control" name="category" id="category" placeholder="Choose category">
+                                        <option value="1">choose...</option>
+                                        <option value="children">Children</option>
+                                        <option value="garden">Garden</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="services">Service</option>
+                                        <option value="cars">Car</option>
+                                        <option value="electronics">Electronics</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <legend for="description">Description</legend>
+                                    <textarea id="description" rows="4" name="description" cols="63"></textarea><br>
+                                </div>
+                                <div class="form-group">
+                                    <legend for="formGroupExampleInput4">Upload some photos</legend>
+
+                                    <div class="col-4">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <label class="custom-file-label" for="customFileLangHTML"
+                                                data-browse="photo">Browse</label>
+                                        </div>
+
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <label class="custom-file-label" for="customFileLangHTML"
+                                                data-browse="photo">Browse</label>
+                                        </div>
+
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <label class="custom-file-label" for="customFileLangHTML"
+                                                data-browse="photo">Browse</label>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <label class="custom-file-label" for="customFileLangHTML"
+                                                data-browse="photo">Browse</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-outline-primary">POST</button>
+                                {{ csrf_field() }}
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
