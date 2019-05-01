@@ -48,7 +48,7 @@
         <div class="col item-1">
             <div class="item-group pointer">
               
-              <h6><i class="fa fa-cloud"></i> Gardern</h6>
+              <h6><i class="fa fa-cloud"></i> Garden</h6>
 
           </div>
         </div>
