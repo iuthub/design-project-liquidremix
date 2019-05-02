@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -62,7 +63,7 @@
                                 @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    <i class="fas fa-user user-icon-color"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -104,7 +105,7 @@
           
            </div>
         </div>
-        <div class="col">
+        <div class="col col-md">
            <!-- <div class="social text-center">
                 <h4> Social links</h4>
                 <ul>
@@ -122,12 +123,17 @@
                 <span id="icon-footer"><i class="fab fa-telegram"></i></span>
                 <span id="icon-footer"> <i class="fab fa-instagram"></i></span>
             </p>
-            <p class="m-0" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
+            <p class="m-0" style="color:rgb(150, 150, 150) !important">Copyright &copy; Melon store 2019</p>
           
             </div>
         </div>
-        <div class="col"></div>
+        <div class="col col-md">
 
+     <p class="decor"><q>Democracy must be built through open societies that share information. 
+        When there is information, there is enlightenment. When there is debate, 
+        are solutions. When there is no sharing of power, no rule of law, no accountability, 
+        there is abuse, corruption, subjugation and indignation</q></p>
+    </div>
         </div>
          
          </div>
