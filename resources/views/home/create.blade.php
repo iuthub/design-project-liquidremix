@@ -43,9 +43,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <legend for="description">Description</legend>
-                                    <textarea id="description" rows="4" name="description" cols="63"></textarea><br>
-                                </div>
+                                    <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
 
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-outline-primary">POST</button>
+                                <button type="submit" class="btn btn-primary">POST</button>
                                 {{ csrf_field() }}
                             </form>
 
