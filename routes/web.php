@@ -24,8 +24,12 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@index',
         'as'=>'home.index'
     ]);
-    Route::get('post',[
+    Route::get('/create',[
         'uses'=>'HomeController@getUserCreate',
         'as'=>'home.create'
-    ]);    
+    ]);
+    Route::post('/create',[
+        'uses'=>'HomeController@postUserCreate',
+        'as'=>'home.create'
+    ]);
 });

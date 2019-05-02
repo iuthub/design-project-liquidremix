@@ -2,8 +2,8 @@
 @section('content')
 <header class=" text-white filters">
     <div class="container text-center">
-      <h1>Welcome to Our Online Store</h1>
-      <p class="lead">Here you can find anything due to you wishes</p>
+      <h1 class="text">{{ config('app.name','melon') }}</h1>
+      <p class="lead">Find anything, sell anything</p>
       <div>
           <form action="#" method="post" novalidate="novalidate">
             <div class="row">
@@ -29,26 +29,14 @@
        
           <div class="col item-1">
             <div class="item-group pointer"> 
-            <h6 data-toggle="collapse" href="#collapseExample"><i class="fa fa-cloud"></i> Electronics</h6> 
+            <h6><i class="fa fa-cloud"></i> Electronics</h6> 
           </div>
         </div>
-        
-        <div class="collapse row z-indexing" id="collapseExample">
-            <div class="card card-body category-info">
-              <div class="row">
-              <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">First item</a>
-                    <a href="#" class="list-group-item list-group-item-action">Second item</a>
-                    <a href="#" class="list-group-item list-group-item-action">Third item</a>
-                  </div>
-                </div> 
-            </div>
-        </div>
-
+      
         <div class="col item-1">
             <div class="item-group pointer">
               
-              <h6><i class="fa fa-cloud"></i> Gardern</h6>
+              <h6><i class="fa fa-cloud"></i> Garden</h6>
 
           </div>
         </div>
@@ -72,26 +60,11 @@
                 <h6 data-toggle="collapse" href="#collapseExamples"><i class="fas fa-child"></i> Children</h6> 
               </div>
             </div>
-            <div class="collapse row z-indexing" id="collapseExamples">
-                <div class="card card-body category-info">
-                  <div class="row">
-                  <div class="list-group col">
-                        <a href="#" class="list-group-item list-group-item-action">First item</a>
-                        <a href="#" class="list-group-item list-group-item-action">Second item</a>
-                        <a href="#" class="list-group-item list-group-item-action">Third item</a>
-                      </div>
-                      <div class="list-group col">
-                        <a href="#" class="list-group-item list-group-item-action">First item</a>
-                        <a href="#" class="list-group-item list-group-item-action">Second item</a>
-                        <a href="#" class="list-group-item list-group-item-action">Third item</a>
-                      </div>
-                    </div> 
-                </div>
-            </div>
+           
             <div class="col item-1">
                 <div class="item-group pointer">
-                  <i class="fas fa-home"></i>
-                  <h6> Home Real Estate</h6>
+                
+                  <h6><i class="fas fa-home"></i> Home Real Estate</h6>
               </div>
             </div>
             <div class="col item-1">
@@ -133,91 +106,6 @@
           </div>
         </div>
 
-        <div class="card box"style="width:210px">
-          <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/418JqTIJ8LL._SX425_.jpg" alt="Card image" style="width:100%">
-          <div class="card-body card-content ">
-            <h4 class="card-title">Telephone<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-            <p class="card-text">1,1000,000<span>som</span></p>
-            <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-          </div>
-        </div>
-
-        <div class="card box"style="width:210px">
-          <img class="card-img-top" src="http://cdn.motorpage.ru/Photos/800/184.jpg" alt="Card image" style="width:100%">
-          <div class="card-body card-content ">
-            <h4 class="card-title">Car<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-            <p class="card-text">1,1000,000<span>som</span></p>
-            <a href="goods.html" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-          </div>
-        </div>
-
-        <div class="card box"style="width:210px">
-          <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/www.cimg.in/images/2011/11/29/12/11636831_13225561461_large.jpg" alt="Card image" style="width:100%">
-          <div class="card-body card-content ">
-            <h4 class="card-title">Computer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-            <p class="card-text">1,1000,000<span>som</span></p>
-            <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-          </div>
-        </div>
-
-        <div class="card box"style="width:210px">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/www.cimg.in/images/2011/11/29/12/11636831_13225561461_large.jpg" alt="Card image" style="width:100%">
-            <div class="card-body card-content ">
-              <h4 class="card-title">Computer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-              <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-              <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-            </div>
-          </div>
-  
-        <div class="card box"style="width:210px">
-          <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81qAy8skVEL._SL1500_.jpg" alt="Card image" style="width:100%">
-          <div class="card-body card-content ">
-            <h4 class="card-title">Printer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-            <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-          </div>
-        </div>
-        
-
-        <div class="card box"style="width:210px">
-            <img class="card-img-top" src="http://cdn.motorpage.ru/Photos/800/184.jpg" alt="Card image" style="width:100%">
-            <div class="card-body card-content ">
-              <h4 class="card-title">Car<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-              <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-              <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-            </div>
-          </div>
-  
-          <div class="card box"style="width:210px">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/www.cimg.in/images/2011/11/29/12/11636831_13225561461_large.jpg" alt="Card image" style="width:100%">
-            <div class="card-body card-content ">
-              <h4 class="card-title">Computer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-              <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-              <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-            </div>
-          </div>
-  
-          <div class="card box"style="width:210px">
-              <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/www.cimg.in/images/2011/11/29/12/11636831_13225561461_large.jpg" alt="Card image" style="width:100%">
-              <div class="card-body card-content ">
-                <h4 class="card-title">Computer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-                <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-                <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-              </div>
-            </div>
-    
-          <div class="card box"style="width:210px">
-            <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81qAy8skVEL._SL1500_.jpg" alt="Card image" style="width:100%">
-            <div class="card-body card-content ">
-              <h4 class="card-title">Printer<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-              <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is an architectt and engineer</p>
-              <a href="#" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-            </div>
-          </div>
-
 
       </div>
       </div>
@@ -238,7 +126,7 @@
                  </ol>
                  <div class="carousel-inner">
                    <div class="carousel-item active">
-                     <img src="https://www.digitaltigers.com/images/feature/ultraview-desktop-manager-v2-software-create-your-workspace.jpg" class="d-block w-100" alt="...">
+                     <img src="http://www.raincloudmagic.com/wp-content/uploads/2011/09/propsheader-1000x300.jpg" class="d-block w-100" alt="...">
                      <div class="carousel-caption d-none d-md-block">
                        <h5>First slide label</h5>
                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
