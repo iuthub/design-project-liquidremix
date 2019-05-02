@@ -11,7 +11,6 @@
                 <li class="breadcrumb-item active" aria-current="page">New ad</li>
             </ol>
         </nav>
-
         <div class="row">
             <h2 class="text-head">Post your advertisement to <span class="text-reg">melon</span></h2>
             <hr>
@@ -41,7 +40,6 @@
                                         <option value="electronics">Electronics</option>
                                     </select>
                                 </div>
-
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Description</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
