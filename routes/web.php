@@ -16,6 +16,10 @@ Route::get('/', [
     'as'=>'index'
 ]);
 
+Route::get('/about', function () {
+    return view('about',['rate'=>1234]);
+});
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

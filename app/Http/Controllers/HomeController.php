@@ -48,4 +48,5 @@ class HomeController extends Controller
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
     }
+
 }
