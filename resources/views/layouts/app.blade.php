@@ -27,7 +27,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-laravel">
             <div class="container">
                 
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -106,16 +106,6 @@
            </div>
         </div>
         <div class="col col-md">
-           <!-- <div class="social text-center">
-                <h4> Social links</h4>
-                <ul>
-                    <li><i class="fab fa-facebook"></i></li>
-                    <li><i class="fab fa-telegram"></i></li>
-                    <li> <i class="fab fa-instagram"></i></li>
-                </ul>
-            
-             <p class="m-0" style="color:rgb(150, 150, 150) !important">Copyright &copy; Online store 2019</p>
-            </div> -->
             
             <div class="social text-center">
                 <h4>Find us on Social Link</h4>

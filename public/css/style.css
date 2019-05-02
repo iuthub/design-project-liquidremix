@@ -10,8 +10,14 @@ body{
     color: #fff;
     
 }
+.card{
+    border-top-color: #833ab4;
+    border-left-color: #fd1d1d;;
+    border-right-color: #833ab4;
+    border-bottom-color: #fd1d1d;
+}
 .auth{
-    margin-top: 60px;
+    margin-top: 120px;
     border-left-color: #fd1d1d;;
     border-right-color: #833ab4;
     border-bottom-color: #fd1d1d;
@@ -47,7 +53,7 @@ body{
     top:70%;
     font-size: 20px;
     text-align: center;
-    margin-right: 40px;
+    margin-top: 20px;
     font-family: 'Quicksand', sans-serif;
     color: linear-gradient(to left, #833ab4,#fd1d1d);;
 }
@@ -62,6 +68,8 @@ body{
         display: none;
     }
  }
- .navbar-lights{
-background-color: #ffffff;
- }
+
+.text-reg{
+    font-family: 'Pacifico', cursive;
+}
+
