@@ -25,6 +25,11 @@
     })
 </script>
 <header class=" text-white filters">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+        azamat and saidakbar
+        </div>
+</div>
     <div class="container text-center">
         <h1 class="text">{{ config('app.name','melon') }}</h1>
         <p class="lead">Find anything, sell anything</p>

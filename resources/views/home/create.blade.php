@@ -2,7 +2,7 @@
 @section('content')
 @include('partials.errors')
 <section id="services" class="bg-light">
-    <div class="container">
+    <div class="container section-gaping">
 
         <nav aria-label="breadcrumb" class="nav-route">
             <ol class="breadcrumb">
