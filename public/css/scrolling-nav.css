@@ -252,6 +252,7 @@ background-color: rgb(182, 182, 182);
 }
 
 .item-list{
+  font-size: 14pt;
   list-style: none;
   color: rgb(126, 126, 126);
 }
@@ -283,3 +284,61 @@ font-style: italic;
   letter-spacing: 1px;
 
 }
+.mybox{
+  margin-left:5%;
+  margin-right:5%;;
+}
+.mybox2{
+  margin-left:15%;
+  margin-right:15%;;
+}
+
+
+.section-gaping{
+margin-bottom: 20%;
+}
+
+.contact{
+  padding: 4%;
+  height: 400px;
+}
+.col-md-3{
+  margin-top:10%;
+ background: linear-gradient(to left,#833ab4,#fd1d1d);
+  padding: 4%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+ 
+}
+.contact-info{
+  margin-top:10%;
+  color: white;
+}
+.contact-info img{
+  margin-bottom: 15%;
+}
+.contact-info h2{
+  margin-bottom: 10%;
+}
+.col-md-9{
+margin-top: 10%;
+  background: #fff;
+  padding: 3%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+  font-weight:600;
+}
+.contact-form button{
+  background: #25274d;
+  color: #fff;
+  font-weight: 600;
+  width: 25%;
+}
+.contact-form button:focus{
+  box-shadow:none;
+}
+.contact-panel{
+
+}*/

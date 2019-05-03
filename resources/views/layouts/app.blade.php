@@ -105,7 +105,7 @@
               
             <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contacts</a></li>
-                <li><a href="{{route('home.policy')}}">Privacy and policy</a></li>
+                <li><a href="/privacy-policy">Privacy and policy</a></li>
              
             </ul>
           

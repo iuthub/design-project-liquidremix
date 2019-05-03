@@ -2,7 +2,7 @@
 @section('content')
 @include('partials.errors')
 <section id="services" class="bg-light">
-    <div class="container">
+    <div class="container section-gaping">
 
         <nav aria-label="breadcrumb" class="nav-route">
             <ol class="breadcrumb">
@@ -41,9 +41,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Description</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                  </div>
+                                        <label for="description">Description textarea</label>
+                                        <textarea type="text" class="form-control" id="description" rows="3" name="description"></textarea>
+                                </div>
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
 
