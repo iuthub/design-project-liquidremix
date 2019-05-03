@@ -11,7 +11,7 @@ class ExchangeRate {
         //$res = $client->request('GET','http://data.fixer.io/api/latest?access_key=afd6c48270d18d80d6740d5fc77c4b1c&format=1');
         //$body = json_decode($res->getBody()->getContents());
         //$uzs = round(($body->rates->UZS)/($body->rates->USD),2);
-        $uzs = 1234;
+        $uzs = 8450.0;
         return $uzs;
     }
 
