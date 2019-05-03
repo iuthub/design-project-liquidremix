@@ -1,5 +1,5 @@
 <?php
-use Illuminate\Http\Request;
+
 namespace App\Custom;
 
 class ExchangeRate {

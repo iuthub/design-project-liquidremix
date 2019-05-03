@@ -44,6 +44,7 @@
 
                     </ul>
                     <i class="fas fa-dollar-sign"></i>
+
                     <span class="navbar-text">1 USD={{ $rate }} UZS</span>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

@@ -35,5 +35,5 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
 });
 
 Route::prefix('admin')->group(function(){
-
+    Route::get('/','AdminController@getAdmin')->name('admin.home');
 });
