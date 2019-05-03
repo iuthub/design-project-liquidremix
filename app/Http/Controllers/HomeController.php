@@ -44,7 +44,7 @@ class HomeController extends Controller
             'description'=>$req->input('description')
         ]);
         Auth::user()->posts()->save($post);
-
+            
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
     }
