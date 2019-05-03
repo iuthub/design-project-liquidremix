@@ -16,6 +16,20 @@ Route::get('/', [
     'as'=>'index'
 ]);
 
+Route::get('/about', function () {
+    return view('about',['rate'=>1234]);
+});
+Route::get('/privacy-policy', function () {
+    return view('policy',['rate'=>1234]);
+});
+
+Route::get('/contact', function () {
+    return view('contact',['rate'=>1234]);
+});
+Route::get('/product', function () {
+    return view('product',['rate'=>1234]);
+});
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -32,8 +46,15 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@postUserCreate',
         'as'=>'home.create'
     ]);
+
 });
 
 Route::prefix('admin')->group(function(){
     Route::get('/','AdminController@getAdmin')->name('admin.home');
 });
+
+Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
+

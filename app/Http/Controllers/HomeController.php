@@ -32,6 +32,10 @@ class HomeController extends Controller
     {
         return view('home.create',['rate'=>ExchangeRate::getRates()]);
     }
+    public function getWishesList()
+    {
+        return view('home.wishes',['rate'=>ExchangeRate::getRates()]);
+    }
     public function postUserCreate(Request $req)
     {
         $this->validate($req,[
@@ -44,8 +48,9 @@ class HomeController extends Controller
             'description'=>$req->input('description')
         ]);
         Auth::user()->posts()->save($post);
-
+            
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
     }
+
 }

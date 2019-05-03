@@ -25,6 +25,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
     @yield('styles')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="{{asset('js/scrolling-nav.js')}}"></script>
+
 </head>
 <body>
     <div id="app">
@@ -44,8 +47,7 @@
 
                     </ul>
                     <i class="fas fa-dollar-sign"></i>
-
-                    <span class="navbar-text">1 USD={{ $rate }} UZS</span>
+                   <span class="navbar-text">1 USD={{ $rate }} UZS</span>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -61,7 +63,9 @@
                         @else
                                 
                                 @if (Auth::user())
-                                    <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
+                            <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                    
+                                <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                                 @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -99,9 +103,9 @@
            <div class="item-list">
             <ul>
               
-                 <li><a href="">About Us</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Privacy and policy</a></li>
+            <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contacts</a></li>
+                <li><a href="/privacy-policy">Privacy and policy</a></li>
              
             </ul>
           
