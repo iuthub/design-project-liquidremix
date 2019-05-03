@@ -44,7 +44,3 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
 Route::get('/about', function () {
     return view('about',['rate'=>1234]);
 });
-Route::post('/search',[
-    'uses'=>'SearchController@readDatabase',
-    'as'=>'search'
-]);

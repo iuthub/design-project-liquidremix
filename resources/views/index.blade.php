@@ -3,23 +3,42 @@
 <script>
     $.ajaxSetup({
         headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     });
     $(document).ready(function(){
+        var timeout;
         $('#title').keyup(function(){
-            var keyword = $(this).val();
-            if(keyword!=''){
+            var key = $(this).val();
+            if(key!=''){
                 var _token = $('input[name="_token"]').val();
-                $.ajax({
-                    url: "/search",
-                    method: "POST",
-                    data: {keyword: keyword, _token: _token},
+                if(timeout)
+                {
+                    clearTimeout(timeout);
+                }
+                timeout = setTimeout(()=>{
+                    $.ajax({
+                    url: `/api/search/${key}`,
+                    method: "GET",
+                    dataType: "json",
+                    data: {_token: _token},
                     success: function(data){
+                        
+                        //console.log(data[0]);
                         $('#searchResults').fadeIn();
-                        $('#searchResults').html(data);
-                    }
-                });
+                        var res = '<div class="dropdown-menu">';
+                        for(var i=0;i<data.length;i++)
+                        {
+                            res+=`<a class="dropdown-item" href="#">${data[i].title}</a>`
+                            //res+=`<p>${data[i].title}</p>`;   
+                        }
+                        res+='</div>';
+                        console.log(res);
+                        $('#searchResults').append(res);
+                        }
+                    });
+                },1500);
+ 
             }
         });
     })
@@ -27,20 +46,30 @@
 <header class=" text-white filters">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
         <div class="card card-body">
-        azamat and saidakbar
+            
         </div>
 </div>
     <div class="container text-center">
         <h1 class="text">{{ config('app.name','melon') }}</h1>
         <p class="lead">Find anything, sell anything</p>
         <div>
-            <form action="#" method="post" novalidate="novalidate">
-                <div class="row">
-                    <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Enter your search keyword">
-                    <div id="searchResults"></div>
+                <div class="form-group">
+                    <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div id="searchResults">
+                            <div class="btn-group">
+                                    
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                  </div>                        
+                    </div>
                 </div>
                 {{ csrf_field() }}
-            </form>
             <div class="category"></div>
 
             <div class="row item">
