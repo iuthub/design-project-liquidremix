@@ -223,7 +223,7 @@ background-color: rgba(0, 0, 0, 0.89);
 }
 .list-group-items{
 line-height: 80px;
-background-color:  rgb(252, 0, 0);
+background-color: #fd1d1d;
 font-size: 20pt;
 font-weight: 700;
 color: white;
@@ -233,7 +233,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   background-color: red;
 }
 .title-panel{
-background: linear-gradient( -90deg,rgb(175, 173, 173),rgb(170, 166, 166));
+background: rgb(238, 237, 237);
 
 }
 .title-panel p{

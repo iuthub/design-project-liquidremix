@@ -54,10 +54,10 @@
                   <img class="card-img-top" src="http://www.carlogos.org/logo/Chevrolet-logo-2004-1920x1080.jpg" alt="">
                 </div>
                 <div class="card-title title-panel">
-                      <p>Contact Number:<span>(99) 800 55 98</span></p>
+                      <p><i class="fas fa-address-book"></i> Contact Number:<span>(99) 800 55 98</span></p>
                 </div>
                 <div class="card-title title-panel">
-                    <p>Address: Yunusobod region, Ahmad street, 34</p>
+                    <p><i class="fas fa-thumbtack"></i> Address: Yunusobod region, Ahmad street, 34 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vero natus quaerat a quasi asperiores placeat blanditiis. Distinctio natus quae recusandae maiores, at aspernatur facere modi, nulla iusto vitae quis.</p>
               </div>
               <div class="card-title title-panel">
                   <p>Additional info:<span>telegram link</span></p>
