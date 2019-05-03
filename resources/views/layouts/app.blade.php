@@ -104,7 +104,7 @@
             <ul>
               
             <li><a href="/about">About Us</a></li>
-                <li><a href="">contacts</a></li>
+                <li><a href="/contact">Contacts</a></li>
                 <li><a href="">Privacy and policy</a></li>
              
             </ul>
