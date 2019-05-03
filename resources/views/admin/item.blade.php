@@ -20,7 +20,7 @@
                     <h4 class="">Card title {{ $x*10 }}</h4>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     <a class="link-text">
-                        <h5 data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></h5>
+                        <h5 id="{{ $x }}" onclick="app(this.id)" data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></h5>
                     </a>
 
                 </div>
@@ -28,8 +28,15 @@
             </div>
             <!--Front Side-->
 
-
-        </div>
+       </div>
     </div>
     <!-- Rotating card -->
 </div>
+
+<script>
+    function app(clicked_id){
+        window.alert(clicked_id);
+        @include('admin.reader')
+    }
+
+</script>

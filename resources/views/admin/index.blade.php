@@ -64,5 +64,4 @@
             @endfor
         </div>
     </div>
-    @include('admin.reader')
 @endsection
