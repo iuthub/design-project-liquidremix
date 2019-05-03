@@ -32,6 +32,10 @@ class HomeController extends Controller
     {
         return view('home.create',['rate'=>ExchangeRate::getRates()]);
     }
+    public function getWishesList()
+    {
+        return view('home.wishes',['rate'=>ExchangeRate::getRates()]);
+    }
     public function postUserCreate(Request $req)
     {
         $this->validate($req,[

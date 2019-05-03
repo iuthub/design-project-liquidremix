@@ -59,12 +59,8 @@
                         @else
                                 
                                 @if (Auth::user())
-                                <a data-toggle="collapse" href="#multiCollapseExample1" class="btn"><i class="fas fa-store"></i> Wishes</a>
-                                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                        <div class="card card-body">
-                                        azamat and saidakbar
-                                        </div>
-                                </div>
+                            <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                    
                                 <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                                 @endif
                             <li class="nav-item dropdown">

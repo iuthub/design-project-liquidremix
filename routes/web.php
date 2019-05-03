@@ -40,4 +40,8 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@postUserCreate',
         'as'=>'home.create'
     ]);
+    Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
 });
