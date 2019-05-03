@@ -72,4 +72,7 @@ body{
 .text-reg{
     font-family: 'Pacifico', cursive;
 }
-
+.dropdown-menu{
+    position: relative;
+    display: block; 
+}
