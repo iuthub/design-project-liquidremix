@@ -292,6 +292,8 @@ font-style: italic;
   margin-left:15%;
   margin-right:15%;;
 }
+
+
 .section-gaping{
 margin-bottom: 20%;
 }
@@ -300,7 +302,7 @@ margin-bottom: 20%;
   padding: 4%;
   height: 400px;
 }
-.col-md-4{
+.col-md-3{
   margin-top:10%;
  background: linear-gradient(to left,#833ab4,#fd1d1d);
   padding: 4%;
@@ -318,7 +320,7 @@ margin-bottom: 20%;
 .contact-info h2{
   margin-bottom: 10%;
 }
-.col-md-8{
+.col-md-9{
 margin-top: 10%;
   background: #fff;
   padding: 3%;
@@ -339,4 +341,4 @@ margin-top: 10%;
 }
 .contact-panel{
 
-}
+}*/

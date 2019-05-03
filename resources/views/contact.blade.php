@@ -2,15 +2,15 @@
 @section('content')
 <div class="container section-gaping">
 	<div class="row">
-      
-		<div class="col-md-4">
+ 
+		<div class="col-md-3">
 			<div class="contact-info">
 				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
 				<h2>Contact Us</h2>
 				<h4>We would love to hear from you !</h4>
 			</div>
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<div class="contact-form">
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="fname">First Name:</label>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="form-group">        
 				  <div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default">Send Message</button>
 				  </div>
 				</div>
 			</div>
