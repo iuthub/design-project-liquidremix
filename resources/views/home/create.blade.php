@@ -41,9 +41,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+
+                                        <label for="description">Description textarea</label>
+                                        <textarea type="text" class="form-control" id="description" rows="3" name="description"></textarea>
+
                                   </div>
+
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
 
