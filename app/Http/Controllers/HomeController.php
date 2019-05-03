@@ -52,5 +52,9 @@ class HomeController extends Controller
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
     }
+    public function getCategory($id)
+    {
+        return view('home.category',['rate'=>ExchangeRate::getRates()]);
+    }
 
 }
