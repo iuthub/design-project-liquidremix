@@ -33,3 +33,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'as'=>'home.create'
     ]);
 });
+
+Route::prefix('admin')->group(function(){
+
+});
