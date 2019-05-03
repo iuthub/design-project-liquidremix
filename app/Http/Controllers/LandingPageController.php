@@ -10,4 +10,8 @@ class LandingPageController extends Controller
     {
         return view('index',['rate'=>ExchangeRate::getRates()]);
     }
+    public function getPolicy()
+    {
+        return view('home.policy');
+    }
 }

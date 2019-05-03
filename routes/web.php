@@ -15,6 +15,10 @@ Route::get('/', [
     'uses'=>'LandingPageController@getIndex',
     'as'=>'index'
 ]);
+Route::get('/privacy-policy', [
+    'uses' => 'LandingPageController@getPolicy',
+    'as' => 'home.policy'
+]);
 
 Auth::routes();
 

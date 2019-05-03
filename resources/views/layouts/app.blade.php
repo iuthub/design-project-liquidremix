@@ -43,7 +43,7 @@
 
                     </ul>
                     <i class="fas fa-dollar-sign"></i>
-                    <span class="navbar-text">1 USD={{ $rate }} UZS</span>
+                   <span class="navbar-text">1 USD={{ $rate }} UZS</span>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -59,7 +59,13 @@
                         @else
                                 
                                 @if (Auth::user())
-                                    <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
+                                <a data-toggle="collapse" href="#multiCollapseExample1" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                        <div class="card card-body">
+                                        azamat and saidakbar
+                                        </div>
+                                </div>
+                                <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                                 @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -97,9 +103,9 @@
            <div class="item-list">
             <ul>
               
-                 <li><a href="">About Us</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Privacy and policy</a></li>
+            <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contacts</a></li>
+                <li><a href="{{route('home.policy')}}">Privacy and policy</a></li>
              
             </ul>
           
