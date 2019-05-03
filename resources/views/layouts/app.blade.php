@@ -24,6 +24,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="{{asset('js/scrolling-nav.js')}}"></script>
+
 </head>
 <body>
     <div id="app">
@@ -59,12 +62,8 @@
                         @else
                                 
                                 @if (Auth::user())
-                                <a data-toggle="collapse" href="#multiCollapseExample1" class="btn"><i class="fas fa-store"></i> Wishes</a>
-                                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                        <div class="card card-body">
-                                        
-                                        </div>
-                                </div>
+                            <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                    
                                 <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                                 @endif
                             <li class="nav-item dropdown">
