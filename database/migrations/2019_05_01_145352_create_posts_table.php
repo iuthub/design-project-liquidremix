@@ -18,7 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('category');
             $table->text('description');
-            $table->integer('status');
+            $table->string('price');
+            $table->integer('status')->default(0);
             $table->integer('user_id');
             $table->timestamps();
         });
