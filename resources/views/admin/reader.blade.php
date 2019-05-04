@@ -14,24 +14,23 @@
             </div>
 
             <div class="modal-body">
-                <h5>Popover in a modal</h5>
-                <p>This
-                    <a role="button" class="btn btn-secondary popover-test" title="" data-content="Popover body content is set in this attribute."
-                       data-original-title="Popover title" data-toggle="popover">button</a> triggers a popover on click.</p>
-                <hr>
-                <h5>Tooltips in a modal</h5>
-                <p>
-                    <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">This link</a>
-                    and
-                    <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">that link</a>
-                    have tooltips on hover.</p>
+                <h2 class="dialog-title text-center">Title content</h2>
+                  <p class="dialog-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <div class="modal-footer text-center">
 
+                <button type="button" class="btn btn-outline-danger waves-effect">
+                    <span class="value">Reject</span>
+                    <i class="far fa-thumbs-down ml-1"></i>
+                </button>
+
+                <button type="button" style="margin-left: 10px;" class="btn btn-outline-success waves-effect" data-dismiss="modal">
+                    <span class="value">Accept</span>
+                    <i class="far fa-thumbs-up ml-1"></i>
+                </button>
+
+            </div>
         </div>
     </div>
 </div>

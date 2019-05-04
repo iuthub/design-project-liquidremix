@@ -58,7 +58,7 @@
 @section('content')
     <div class="product-container">
         <div class="row">
-            @for($x=1;$x<15;$x++)
+            @for($x=1;$x<16;$x++)
                 <?php  $link = 'https://mdbootstrap.com/img/Photos/Others/photo'.$x.'.jpg'  ?>
                 @include('admin.item')
             @endfor
