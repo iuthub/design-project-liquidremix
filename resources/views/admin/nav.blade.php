@@ -26,8 +26,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">
-                    <i class="fas fa-bell"></i> Notification
+                <a class="nav-link waves-effect waves-light" href="{{ route('admin.home') }}">
+                    <i class="fas fa-bell"></i> New products
                 </a>
             </li>
 
@@ -35,8 +35,8 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <i class="fas fa-user"></i> Profile </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                    <a class="dropdown-item waves-effect waves-light" href="#">Statistics</a>
-                    <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
+                    <a class="dropdown-item waves-effect waves-light" href="{{ route('admin.statics') }}">Statistics</a>
+                    <a class="dropdown-item waves-effect waves-light" href="{{ route('index') }}">Log out</a>
                 </div>
             </li>
         </ul>
