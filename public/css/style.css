@@ -67,9 +67,19 @@ body{
     .col-sm-4{
         display: none;
     }
- }
+}
 
 .text-reg{
     font-family: 'Pacifico', cursive;
 }
-
+#searchResults{
+    background-color: #fff;
+    text-align:left;
+    background-color: white;
+    border-radius:5px;
+    color:black;
+    
+}
+#priceDiv select{
+    margin-top: 8px;
+}

@@ -1,5 +1,49 @@
 @extends('layouts.app')
 @section('content')
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(document).ready(function () {
+        var timeout;
+        $('#title').keyup(function () {
+            var key = $(this).val();
+            if (key != '') {
+                var _token = $('input[name="_token"]').val();
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                timeout = setTimeout(() => {
+                    $.ajax({
+                        url: `/api/search/${key}`,
+                        method: "GET",
+                        dataType: "json",
+                        data: {
+                            _token: _token
+                        },
+                        success: function (data) {
+
+                            //console.log(data[0]);
+                            $('#searchResults').fadeIn();
+                            var res = '<ul>';
+                            for (var i = 0; i < data.length; i++) {
+                                res +=`<a href="#">${data[i].title}</a><br>`
+                            }
+                            res += '</ul>';
+                            console.log(res);
+                            //Used jQuery's docs for the line below line. http://api.jquery.com/html/
+                            $('#searchResults').html(res);
+                        }
+                    });
+                }, 500);
+
+            }
+        });
+    })
+
+</script>
 <header class=" text-white filters">
   <div class="collapse multi-collapse" id="multiCollapseExample1">
     <div class="card card-body">
@@ -156,3 +200,4 @@
   
 </section>
 @endsection
+
