@@ -24,6 +24,10 @@
     <link href="{{ asset('mdb/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Styles -->
     @yield('styles')
+
+
+<!-- JQuery -->
+    <script type="text/javascript" src="{{ asset('mdb/js/jquery-3.4.0.min.js') }}"></script>
 </head>
 <body>
 <!-- Nav notification count is dynamic. -->
@@ -37,8 +41,6 @@
 
 <!-- SCRIPTS -->
 
-<!-- JQuery -->
-<script type="text/javascript" src="{{ asset('mdb/js/jquery-3.4.0.min.js') }}"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="{{ asset('mdb/js/popper.min.js') }}"></script>
 <!-- Bootstrap core JavaScript -->

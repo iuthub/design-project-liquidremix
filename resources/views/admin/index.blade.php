@@ -59,9 +59,10 @@
     <div class="product-container">
         <div class="row">
             @for($x=1;$x<15;$x++)
-                <?php  $link = 'https://mdbootstrap.com/img/Photos/Others/photo'.$x.'.jpg' ?>
+                <?php  $link = 'https://mdbootstrap.com/img/Photos/Others/photo'.$x.'.jpg'  ?>
                 @include('admin.item')
             @endfor
         </div>
     </div>
+
 @endsection

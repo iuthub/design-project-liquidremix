@@ -5,7 +5,7 @@
             <div class="modal-header">
                 <!-- Image-->
                 <div class="view overlay">
-                    <img class="card-img-top" src="{{ $link }}" alt="Example photo">
+                    <img id="dialog-image" class="card-img-top" src="{{ $link }}" alt="Example photo">
                     <a>
                         <div class="mask rgba-white-slight"></div>
                     </a>
