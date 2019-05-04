@@ -128,7 +128,7 @@
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="file2" name="file2">
                                             <label class="custom-file-label selected" for="customFileLangHTML"
-                                                data-browse="photo">filename</label>
+                                                data-browse="photo">Browse</label>
                                         </div>
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="file3" name="file3">
