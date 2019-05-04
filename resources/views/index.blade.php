@@ -33,6 +33,7 @@
                             }
                             res += '</ul>';
                             console.log(res);
+                            //Used jQuery's docs for the line below line. http://api.jquery.com/html/
                             $('#searchResults').html(res);
                         }
                     });
