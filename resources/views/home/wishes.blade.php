@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<header>
-</header>
+<header></header>
 <section id="services" class="bg-light">
 
         <div class="container section-gaping"> 
