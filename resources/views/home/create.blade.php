@@ -14,7 +14,7 @@
             console.log(priceTotal);
         });
         var regExTitle = new RegExp(/\w{5,}/);
-        var regExDescription = new RegExp(/\w{10,}/);
+        var regExDescription = new RegExp(/.{10,}/);
         var regExPrice = new RegExp(/^[0-9]+(\.[0-9]{1,2})?$/);
         $("input[id='title']").keyup(function () {
             var str = $(this).val();
@@ -49,6 +49,12 @@
                 $(this).removeClass("form-control is-invalid").addClass("form-control");
             }
         });
+        //Below trick is from w3Schools. https://www.w3schools.com/bootstrap4/bootstrap_forms_custom.asp
+        $(".custom-file-input").on("change",function(){
+            console.log('Fileeee');
+            var name = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(name);
+        });
     });
 </script>
 <section id="services" class="bg-light">
@@ -70,11 +76,11 @@
                 <div class="card">
                     <div class="card-body col-8">
                         <div class="card-title">
-                            <form method="POST" action="{{ route('home.create') }}">
+                            <form method="POST" action="{{ route('home.create') }}" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="title">Title (min 5)</label>
                                     
-                                    </span>
+                                    
                                     <input type="text" name="title" class="form-control" id="title"
                                         placeholder="Title of the ad" data-toggle="popover" data-placement="right">
                                         
@@ -113,37 +119,32 @@
                                 </div>
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
-
                                     <div class="col-4">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                            <label class="custom-file-label" for="customFileLangHTML"
-                                                data-browse="photo">Browse</label>
-                                        </div>
-
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
-                                            <label class="custom-file-label" for="customFileLangHTML"
-                                                data-browse="photo">Browse</label>
-                                        </div>
-
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <input type="file" class="custom-file-input" id="file1" name="file1">
                                             <label class="custom-file-label" for="customFileLangHTML"
                                                 data-browse="photo">Browse</label>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFileLangHTML">
+                                            <input type="file" class="custom-file-input" id="file2" name="file2">
+                                            <label class="custom-file-label selected" for="customFileLangHTML"
+                                                data-browse="photo">filename</label>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="file3" name="file3">
+                                            <label class="custom-file-label" for="customFileLangHTML"
+                                                data-browse="photo">Browse</label>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="file4" name="file4">
                                             <label class="custom-file-label" for="customFileLangHTML"
                                                 data-browse="photo">Browse</label>
                                         </div>
                                     </div>
                                 </div>
-
                                 <button type="submit" class="btn btn-primary">POST</button>
                                 {{ csrf_field() }}
                             </form>
-
                         </div>
                     </div>
                 </div>
