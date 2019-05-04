@@ -10,4 +10,9 @@ class LandingPageController extends Controller
     {
         return view('index',['rate'=>ExchangeRate::getRates()]);
     }
+
+    public function getCategory($id)
+    {
+        return view('category',['rate'=>ExchangeRate::getRates()]);
+    }
 }

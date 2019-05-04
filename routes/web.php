@@ -31,8 +31,8 @@ Route::get('/product', function () {
 });
 
 Route::get('/category/{id}',[
-    'uses'=>'HomeController@getCategory',
-    'as'=>'home.category'
+    'uses'=>'LandingPageController@getCategory',
+    'as'=>'category'
 ]);
 
 Auth::routes();
