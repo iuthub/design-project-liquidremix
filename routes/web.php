@@ -17,12 +17,23 @@ Route::get('/', [
 ]);
 
 Route::get('/about', function () {
-    return view('about',['rate'=>1234]);
+    return view('about',['rate'=>8450.0]);
+});
+Route::get('/privacy-policy', function () {
+    return view('policy',['rate'=>8450.0]);
 });
 
 Route::get('/contact', function () {
-    return view('contact',['rate'=>1234]);
+    return view('contact',['rate'=>8450.0]);
 });
+Route::get('/product', function () {
+    return view('product',['rate'=>1234]);
+});
+
+Route::get('/category/{id}',[
+    'uses'=>'HomeController@getCategory',
+    'as'=>'home.category'
+]);
 
 Auth::routes();
 
@@ -40,7 +51,8 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@postUserCreate',
         'as'=>'home.create'
     ]);
-});
-Route::get('/about', function () {
-    return view('about',['rate'=>1234]);
+    Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
 });

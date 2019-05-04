@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @include('partials.errors')
+
 <section id="services" class="bg-light">
     <div class="container section-gaping">
 
@@ -42,9 +43,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
-                                  </div>
+                                        <label for="description">Description textarea</label>
+                                        <textarea type="text" class="form-control" id="description" rows="3" name="description"></textarea>
+                                      </div>
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
 
@@ -73,6 +74,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <button type="submit" class="btn btn-primary">POST</button>
                                 {{ csrf_field() }}
                             </form>

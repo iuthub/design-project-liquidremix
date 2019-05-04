@@ -67,60 +67,57 @@
         <div class="category"></div>
 
         <div class="row item">
-
-            <div class="col item-1">
-                <div class="item-group pointer">
-                    <h6><i class="fa fa-cloud"></i> Electronics</h6>
-                </div>
+          <a href="{{route('home.category','electronics')}}" class="col item-1">
+            <div class="item-group pointer"> 
+              <h6><i class="fa fa-cloud"></i> Electronics</h6> 
             </div>
-
-            <div class="col item-1">
+          </a>
+            <a href="{{route('home.category','garden')}}" class="col item-1">
                 <div class="item-group pointer">
-
-                    <h6><i class="fa fa-cloud"></i> Garden</h6>
+                
+                  <h6><i class="fa fa-cloud"></i> Garden</h6>
 
                 </div>
+            </a>
+        
+        <a href="{{route('home.category','clothes')}}" class="col item-1">
+            <div class="item-group pointer">
+              <h6>  <i class="fas fa-tshirt"></i> Clothes </h6>
             </div>
-
-            <div class="col item-1">
-                <div class="item-group pointer">
-                    <h6> <i class="fas fa-tshirt"></i> Clothes </h6>
-                </div>
+        </a>
+        <a href="{{route('home.category','services')}}" class="col item-1">
+            <div class="item-group pointer"> 
+              <h6><i class="fas fa-concierge-bell"></i> Services </h6>
             </div>
-
-            <div class="col item-1">
-                <div class="item-group pointer">
-                    <h6><i class="fas fa-concierge-bell"></i> Services </h6>
-                </div>
-            </div>
-        </div>
+        </a>
+        
+    </div>
         <div class="row item">
-            <div class="col item-1">
+            <a href="{{route('home.category','children')}}" class="col item-1">
                 <div class="item-group pointer">
-
-                    <h6 data-toggle="collapse" href="#collapseExamples"><i class="fas fa-child"></i> Children</h6>
-                </div>
-            </div>
-
-            <div class="col item-1">
+                <h6><i class="fas fa-child"></i> Children</h6> 
+              </div>
+            </a>
+           
+            <a href="{{route('home.category','homeRealEstate')}}" class="col item-1">
                 <div class="item-group pointer">
-
-                    <h6><i class="fas fa-home"></i> Home Real Estate</h6>
-                </div>
-            </div>
-            <div class="col item-1">
+                
+                  <h6><i class="fas fa-home"></i> Home Real Estate</h6>
+              </div>
+            </a>
+            <a href="{{route('home.category','fashion')}}" class="col item-1">
                 <div class="item-group pointer">
-
-                    <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
-                </div>
-            </div>
-            <div class="col item-1">
+                 
+                  <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
+              </div>
+            </a>
+            <a href="{{route('home.category','cars')}}" class="col item-1">
                 <div class="item-group pointer">
-
-                    <h5> <i class="fas fa-car"></i> Cars </h5>
-                </div>
-            </div>
-        </div>
+                 
+                  <h5> <i class="fas fa-car"></i>  Cars </h5>
+              </div>
+            </a>
+          </div>
 
     </div>
     </div>
