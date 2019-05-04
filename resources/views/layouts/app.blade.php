@@ -92,6 +92,7 @@
 
                         @if (Auth::user())
                         <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                        <a  class="btn  openbtn" onclick="openNav()"><i class="fas fa-store"></i> CART SIDE</a>
 
                         <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
                         @endif
@@ -119,7 +120,14 @@
                 </div>
             </div>
         </nav>
-
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <div class="container">
+              <div class="row">
+                this is my working zone
+              </div>
+            </div>
+          </div>
         <main>
             @yield('content')
         </main>
