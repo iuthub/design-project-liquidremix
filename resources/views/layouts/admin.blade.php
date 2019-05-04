@@ -31,7 +31,7 @@
 </head>
 <body>
 <!-- Nav notification count is dynamic. -->
-        @yield('nav')
+        @include('admin.nav')
 <div id="app">
     <main>
         @yield('content')
@@ -47,5 +47,6 @@
 <script type="text/javascript" src="{{ asset('mdb/js/bootstrap.min.js') }}"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="{{ asset('mdb/js/mdb.min.js') }}"></script>
+@yield('js')
 </body>
 </html>

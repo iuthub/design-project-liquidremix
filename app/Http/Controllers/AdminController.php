@@ -11,4 +11,8 @@ class AdminController extends Controller
     public function getAdmin(){
         return view('admin.index',['rate'=>ExchangeRate::getRates()]);
     }
+
+    public function getStatistics(){
+        return view('admin.statistics',['rate'=>ExchangeRate::getRates(),'title'=>'Hello World is beautiful']);
+    }
 }

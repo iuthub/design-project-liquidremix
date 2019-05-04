@@ -31,6 +31,8 @@
     <!-- Rotating card -->
 </div>
 @include('admin.reader')
+
+@section('js')
 <script>
     $(document).ready(function(){
         $('.opendialog').click(function(){
@@ -39,3 +41,4 @@
         });
     });
 </script>
+@endsection

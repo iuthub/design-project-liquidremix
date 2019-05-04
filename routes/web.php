@@ -51,6 +51,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
 
 Route::prefix('admin')->group(function(){
     Route::get('/','AdminController@getAdmin')->name('admin.home');
+    Route::get('/statics','AdminController@getStatistics')->name('admin.statics');
 });
 
 Route::get('/wishes',[
