@@ -6,129 +6,122 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    $(document).ready(function(){
+    $(document).ready(function () {
         var timeout;
-        $('#title').keyup(function(){
+        $('#title').keyup(function () {
             var key = $(this).val();
-            if(key!=''){
+            if (key != '') {
                 var _token = $('input[name="_token"]').val();
-                if(timeout)
-                {
+                if (timeout) {
                     clearTimeout(timeout);
                 }
-                timeout = setTimeout(()=>{
+                timeout = setTimeout(() => {
                     $.ajax({
-                    url: `/api/search/${key}`,
-                    method: "GET",
-                    dataType: "json",
-                    data: {_token: _token},
-                    success: function(data){
-                        
-                        //console.log(data[0]);
-                        $('#searchResults').fadeIn();
-                        var res = '<div class="dropdown-menu">';
-                        for(var i=0;i<data.length;i++)
-                        {
-                            res+=`<a class="dropdown-item" href="#">${data[i].title}</a>`
-                            //res+=`<p>${data[i].title}</p>`;   
-                        }
-                        res+='</div>';
-                        console.log(res);
-                        $('#searchResults').append(res);
+                        url: `/api/search/${key}`,
+                        method: "GET",
+                        dataType: "json",
+                        data: {
+                            _token: _token
+                        },
+                        success: function (data) {
+
+                            //console.log(data[0]);
+                            $('#searchResults').fadeIn();
+                            var res = '<ul>';
+                            for (var i = 0; i < data.length; i++) {
+                                res +=`<a href="#">${data[i].title}</a><br>`
+                            }
+                            res += '</ul>';
+                            console.log(res);
+                            $('#searchResults').html(res);
                         }
                     });
-                },1500);
- 
+                }, 500);
+
             }
         });
     })
+
 </script>
 <header class=" text-white filters">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
         <div class="card card-body">
-            
+
         </div>
-</div>
+    </div>
     <div class="container text-center">
         <h1 class="text">{{ config('app.name','melon') }}</h1>
         <p class="lead">Find anything, sell anything</p>
         <div>
-                <div class="form-group">
-                    <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div id="searchResults">
-                            <div class="btn-group">
-                                    
-                                    <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="#">Action</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                      <div class="dropdown-divider"></div>
-                                      <a class="dropdown-item" href="#">Separated link</a>
-                                    </div>
-                                  </div>                        
-                    </div>
-                </div>
-                {{ csrf_field() }}
-            <div class="category"></div>
-
-            <div class="row item">
-
-                <div class="col item-1">
-                    <div class="item-group pointer">
-                        <h6><i class="fa fa-cloud"></i> Electronics</h6>
-                    </div>
-                </div>
-
-                <div class="col item-1">
-                    <div class="item-group pointer">
-
-                        <h6><i class="fa fa-cloud"></i> Garden</h6>
-
-                    </div>
-                </div>
-
-                <div class="col item-1">
-                    <div class="item-group pointer">
-                        <h6> <i class="fas fa-tshirt"></i> Clothes </h6>
-                    </div>
-                </div>
-
-                <div class="col item-1">
-                    <div class="item-group pointer">
-                        <h6><i class="fas fa-concierge-bell"></i> Services </h6>
-                    </div>
-                </div>
+            <div class="form-group">
+                <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <div id="searchResults">
+                    
+                   
+                </div>   
             </div>
-            <div class="row item">
-                <div class="col item-1">
-                    <div class="item-group pointer">
-
-                        <h6 data-toggle="collapse" href="#collapseExamples"><i class="fas fa-child"></i> Children</h6>
-                    </div>
-                </div>
-
-                <div class="col item-1">
-                    <div class="item-group pointer">
-
-                        <h6><i class="fas fa-home"></i> Home Real Estate</h6>
-                    </div>
-                </div>
-                <div class="col item-1">
-                    <div class="item-group pointer">
-
-                        <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
-                    </div>
-                </div>
-                <div class="col item-1">
-                    <div class="item-group pointer">
-
-                        <h5> <i class="fas fa-car"></i> Cars </h5>
-                    </div>
-                </div>
-            </div>
-
         </div>
+        {{ csrf_field() }}
+        <div class="category"></div>
+
+        <div class="row item">
+
+            <div class="col item-1">
+                <div class="item-group pointer">
+                    <h6><i class="fa fa-cloud"></i> Electronics</h6>
+                </div>
+            </div>
+
+            <div class="col item-1">
+                <div class="item-group pointer">
+
+                    <h6><i class="fa fa-cloud"></i> Garden</h6>
+
+                </div>
+            </div>
+
+            <div class="col item-1">
+                <div class="item-group pointer">
+                    <h6> <i class="fas fa-tshirt"></i> Clothes </h6>
+                </div>
+            </div>
+
+            <div class="col item-1">
+                <div class="item-group pointer">
+                    <h6><i class="fas fa-concierge-bell"></i> Services </h6>
+                </div>
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col item-1">
+                <div class="item-group pointer">
+
+                    <h6 data-toggle="collapse" href="#collapseExamples"><i class="fas fa-child"></i> Children</h6>
+                </div>
+            </div>
+
+            <div class="col item-1">
+                <div class="item-group pointer">
+
+                    <h6><i class="fas fa-home"></i> Home Real Estate</h6>
+                </div>
+            </div>
+            <div class="col item-1">
+                <div class="item-group pointer">
+
+                    <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
+                </div>
+            </div>
+            <div class="col item-1">
+                <div class="item-group pointer">
+
+                    <h5> <i class="fas fa-car"></i> Cars </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
 </header>
 

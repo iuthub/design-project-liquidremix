@@ -72,6 +72,11 @@ body{
 .text-reg{
     font-family: 'Pacifico', cursive;
 }
-.searchResults{
+#searchResults{
     background-color: #fff;
+    text-align:left;
+    background-color: white;
+    border-radius:5px;
+    color:black;
+    
 }
