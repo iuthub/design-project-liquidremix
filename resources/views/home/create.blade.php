@@ -1,7 +1,56 @@
 @extends('layouts.app')
 @section('content')
-@include('partials.errors')
 
+<script>
+    function setCurrency(val) {
+        var priceTotal = $("#amount").val() + ' ' + $("#currency").val();
+        $("input[type='hidden'][id='postPrice']").val(priceTotal);
+        console.log(priceTotal);
+    }
+    $(document).ready(function () {
+        $("#amount").keyup(function () {
+            var priceTotal = $("#amount").val() + ' ' + $("#currency").val();
+            $("input[type='hidden'][id='postPrice']").val(priceTotal);
+            console.log(priceTotal);
+        });
+        var regExTitle = new RegExp(/\w{5,}/);
+        var regExDescription = new RegExp(/\w{10,}/);
+        var regExPrice = new RegExp(/^[0-9]+(\.[0-9]{1,2})?$/);
+        $("input[id='title']").keyup(function () {
+            var str = $(this).val();
+            if(!regExTitle.test(str))
+            {
+                console.log('Less');
+                $(this).removeClass("form-group").addClass("form-group is-invalid");
+            }else{
+                $(this).removeClass("form-group is-invalid").addClass("form-group");
+            }
+        });
+        $("input[id='amount']").keyup(function () {
+            var str = $(this).val();
+            if(str!=''){
+            if(!regExPrice.test(str))
+            {
+                console.log('Less');
+                $(this).removeClass("form-group").addClass("form-group is-invalid");
+            }else{
+                $(this).removeClass("form-group is-invalid").addClass("form-group");
+            }
+            }
+        });
+        $("textarea[id='description']").keyup(function () {
+            var str = $(this).val();
+            console.log('desc');
+            if(!regExDescription.test(str))
+            {
+                console.log('Less');
+                $(this).removeClass("form-control").addClass("form-control is-invalid");
+            }else{
+                $(this).removeClass("form-control is-invalid").addClass("form-control");
+            }
+        });
+    });
+</script>
 <section id="services" class="bg-light">
     <div class="container section-gaping">
 
@@ -12,28 +61,29 @@
                 <li class="breadcrumb-item active" aria-current="page">New ad</li>
             </ol>
         </nav>
-        <div class="row">
+        <div class="row" id="text-head">
             <h2 class="text-head">Post your advertisement to <span class="text-reg">melon</span></h2>
             <hr>
         </div>
         <div class="row">
-
             <div class="col">
                 <div class="card">
                     <div class="card-body col-8">
                         <div class="card-title">
-                          <form method="POST" action="{{ route('home.create') }}">
-                                
+                            <form method="POST" action="{{ route('home.create') }}">
                                 <div class="form-group">
-                                    <label for="title">Title</label>
-                                    <input type="text" name="title" class="form-control" id="title" 
-                                        placeholder="Title of the ad" data-toggle="popover"
-                                        data-placement="right">
-                                </div>
+                                    <label for="title">Title (min 5)</label>
+                                    
+                                    </span>
+                                    <input type="text" name="title" class="form-control" id="title"
+                                        placeholder="Title of the ad" data-toggle="popover" data-placement="right">
+                                        
+                                    </div>
                                 <div class="form-group">
                                     <label for="category">Category</label>
-                                    <select class="form-control" name="category" id="category" placeholder="Choose category">
-                                        <option value="1">choose...</option>
+                                    <select class="form-control" name="category" id="category"
+                                        placeholder="Choose category">
+                                        <option selected disabled">Choose...</option>
                                         <option value="children">Children</option>
                                         <option value="garden">Garden</option>
                                         <option value="fashion">Fashion</option>
@@ -43,9 +93,24 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                        <label for="description">Description textarea</label>
-                                        <textarea type="text" class="form-control" id="description" rows="3" name="description"></textarea>
-                                      </div>
+                                    <label for="description">Description textarea</label>
+                                    <textarea type="text" class="form-control" id="description" rows="3"
+                                        name="description"></textarea>
+                                </div>
+                                <div class="form-group row" id="priceDiv">
+                                    <div class="col-xs-3">
+                                        <label for="price">Price</label>
+                                        <input type="text" class="form-control is-invalid" id="amount" name="amount" >
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <label for="currency"></label>
+                                        <select class="form-control" name="currency" id="currency" onchange="setCurrency(this)">
+                                            <option>UZS</option>
+                                            <option>USD</option>
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="price" id='postPrice' value="">                             
+                                </div>
                                 <div class="form-group">
                                     <legend for="formGroupExampleInput4">Upload some photos</legend>
 

@@ -67,7 +67,7 @@ body{
     .col-sm-4{
         display: none;
     }
- }
+}
 
 .text-reg{
     font-family: 'Pacifico', cursive;
@@ -79,4 +79,7 @@ body{
     border-radius:5px;
     color:black;
     
+}
+#priceDiv select{
+    margin-top: 8px;
 }
