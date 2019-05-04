@@ -11,4 +11,8 @@ class LandingPageController extends Controller
     	
         return view('index',['rate'=>ExchangeRate::getRates()])->withPosts($posts);
     }
+    public function getCategory($id)
+    {
+        return view('category',['rate'=>ExchangeRate::getRates()]);
+    }
 }
