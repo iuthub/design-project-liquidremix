@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Custom\ExchangeRate;
 use App\User;
 use App\Post;
+use App\PostPhoto;
 use Auth;
 class HomeController extends Controller
 {
@@ -41,7 +42,12 @@ class HomeController extends Controller
         $this->validate($req,[
             'title' => 'required|min:5',
             'description'=>'required|min:10',
+            'file1'=>'image|nullable|max:1500',
+            'file2'=>'image|nullable|max:1500',
+            'file3'=>'image|nullable|max:1500',
+            'file4'=>'image|nullable|max:1500'
         ]);
+       
         $post = new Post([
             'title'=>$req->input('title'),
             'category'=>$req->input('category'),
@@ -50,6 +56,39 @@ class HomeController extends Controller
             'status'=>0
         ]);
         Auth::user()->posts()->save($post);
+        if($req->hasFile('file1'))
+        {
+            $path = $req->file('file1')->store('public/files');
+            $photo = new PostPhoto([
+                'url'=>$path
+            ]);
+            $post->photos()->save($photo);       
+        }
+        if($req->hasFile('file2'))
+        {
+            $path = $req->file('file2')->store('public/files');
+            $photo = new PostPhoto([
+                'url'=>$path
+            ]);
+            $post->photos()->save($photo);       
+        }
+        if($req->hasFile('file3'))
+        {
+            $path = $req->file('file3')->store('public/files');
+            $photo = new PostPhoto([
+                'url'=>$path
+            ]);
+            $post->photos()->save($photo);       
+        }
+        if($req->hasFile('file4'))
+        {
+            $path = $req->file('file4')->store('public/files');
+            $photo = new PostPhoto([
+                'url'=>$path
+            ]);
+            $post->photos()->save($photo);       
+        }
+        
             
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
