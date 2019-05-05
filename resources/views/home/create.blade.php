@@ -13,7 +13,7 @@
             $("input[type='hidden'][id='postPrice']").val(priceTotal);
             console.log(priceTotal);
         });
-        var regExTitle = new RegExp(/\w{5,}/);
+        var regExTitle = new RegExp(/.{5,}/);
         var regExDescription = new RegExp(/.{10,}/);
         var regExPrice = new RegExp(/^[0-9]+(\.[0-9]{1,2})?$/);
         $("input[id='title']").keyup(function () {
@@ -96,12 +96,16 @@
                                         <option value="services">Services</option>
                                         <option value="children">Children</option>
                                         <option value="home-real-estate">Home Real Estate</option>
-                                        <option value="fashion">Fashion</option>
-                                        <option value="cars">Car</option>
+                                        <option value="clothes">Clothes</option>
+                                        <option value="jobs">Jobs</option>
+                                        <option value="vehicles">Vehicles</option>
+                                        <option value="services">Services</option>
+                                        <option value="vacancies">Vacancies</option>
+                                        <option value="furniture">Furniture</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description textarea</label>
+                                    <label for="description">Description</label>
                                     <textarea type="text" class="form-control" id="description" rows="3"
                                         name="description"></textarea>
                                 </div>

@@ -142,7 +142,7 @@
                         <ul>
 
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contacts</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
                             <li><a href="/privacy-policy">Privacy and policy</a></li>
 
                         </ul>
@@ -152,7 +152,7 @@
                 <div class="col col-md">
 
                     <div class="social text-center">
-                        <h4>Find us on Social Link</h4>
+                        <h4>On Social networks</h4>
                         <p><span id="icon-footer"><i class="fab fa-facebook"></i></span>
                             <span id="icon-footer"><i class="fab fa-telegram"></i></span>
                             <span id="icon-footer"> <i class="fab fa-instagram"></i></span>
