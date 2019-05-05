@@ -60,7 +60,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@getWishesList',
         'as'=>'home.wishes'
     ]);
-    Route::get('/wishes/{id}',[
+    Route::get('/wishes',[
         'uses'=>'HomeController@getWishesList',
         'as'=>'home.wishes'
     ]);
