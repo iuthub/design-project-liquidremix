@@ -31,6 +31,7 @@ Route::get('/post/{id}',[
     'uses'=>'LandingPageController@getPost',
     'as'=>'post.get'
 ]);
+
 Route::get('post/{id}/like', [
     'uses' => 'LandingPageController@getLikePost',
     'as' => 'post.like'
