@@ -12,7 +12,9 @@
                 <h2 class="">Liked products</h2>
                 <p>here you can know what you were looking for</p>
                 @foreach ($posts as $post)
-                  <div class="card mb-3 boxing" style="max-width: 740px;">
+                @foreach($likes as $like)
+                @if($post->id == $like->post_id)         
+                     <div class="card mb-3 boxing" style="max-width: 740px;">
                     <div class="row no-gutters">
                       <div class="col-md-4">
                         <a href="{{route('post.get',['id'=>$post->id])}}"><img src="/storage/files/{{$post->photos->first()->url  }}" class="card-img img-product" alt="...">
@@ -33,7 +35,11 @@
                         </div>
                       </div>
                     </div>
-                  </div> 
+                  </div>            
+                @endif
+                @continue
+                 
+                  @endforeach
                   @endforeach
             
     

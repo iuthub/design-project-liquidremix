@@ -34,8 +34,9 @@ class HomeController extends Controller
     }
     public function getWishesList()
     {
-        $likes = Like::find(Auth:user()->get());
-        return(view('home.wishes',['likes'=>$likes]));
+        $likes = Like::where('user_id',Auth::user()->id)->get();
+        $posts = Post::all();
+        return(view('home.wishes',['posts'=>$posts,'likes'=>$likes]));
     }
     public function getLikePost($id)
     {
