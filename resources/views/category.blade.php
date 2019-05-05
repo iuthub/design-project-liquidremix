@@ -80,7 +80,7 @@
                      <p class="card-text">
                       {{$post->description}}
                     </p>
-                  <p class="card-text"><small class="text-muted"><i class="fas fa-thumbtack"></i> Posted by: {{$post->user->name}}</small><small><i style="color:burlywood; padding-left: 10%;" class="fas fa-history"></i>Time: 29/02/2019</small><span class="like" style="float:right; font-size:15pt;"><i id="like-heart" class="far fa-heart"></i></span></p>
+                    <p class="card-text"><small class="text-muted"><i class="fas fa-thumbtack"></i> Posted by:{{$post->user->name}}</small><small><i style="color:burlywood; padding-left: 10%;" class="fas fa-history"></i> Time: {{$post->created_at}}</small><span class="like" style="float:right; font-size:15pt;"><i id="like-heart" class="far fa-heart"></i></span></p>
                   </div>
                 </div>
               </div>
