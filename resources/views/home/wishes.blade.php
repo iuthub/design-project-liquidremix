@@ -13,7 +13,7 @@
                 <p>here you can know what you were looking for</p>
                 @foreach ($posts as $post)
                 @foreach($likes as $like)
-                @if($post->id == $like->post_id)         
+                @if($post->id == $like->post_id)      
                      <div class="card mb-3 boxing" style="max-width: 740px;">
                     <div class="row no-gutters">
                       <div class="col-md-4">
