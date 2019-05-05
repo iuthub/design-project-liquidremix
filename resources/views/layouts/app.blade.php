@@ -41,23 +41,18 @@
 <body>
     <script>
         $(document).ready(function(){
-            $.ajax({
-            url: 'http://data.fixer.io/api/latest?access_key=afd6c48270d18d80d6740d5fc77c4b1c&format=1',
-            method: "GET",
-            success: function (data) {
-                var rate = (data.rates.UZS / data.rates.USD).toFixed(2);
-                console.log(rate);
-                var result = `<i class="fas fa-dollar-sign"></i>
-                            <span class="navbar-text" id="alltext">1 USD=${rate} UZS</span>`;
-                $('#rates').html(result);
-             }
-            });
+            // $.ajax({
+            // url: 'http://data.fixer.io/api/latest?access_key=afd6c48270d18d80d6740d5fc77c4b1c&format=1',
+            // method: "GET",
+            // success: function (data) {
+            //     var rate = (data.rates.UZS / data.rates.USD).toFixed(2);
+            //     console.log(rate);
+            //     var result = `<i class="fas fa-dollar-sign"></i>
+            //                 <span class="navbar-text" id="alltext">1 USD=${rate} UZS</span>`;
+            //     $('#rates').html(result);
+            //  }
+            // });
     });
-    $(document).ready(function(){
-        $('img').attr('alt','Image is not showing because of Heroku limitations. Works fine locally!!!')
-    console.log($('img').attr('alt'));
-    })
-    
     </script>
     <div id="app">
         <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-laravel">
@@ -171,7 +166,7 @@
                 </div>
                 <div class="col col-md">
 
-                    <p class="decor"><q>Seeks are what buyers create to let Sellers know they want something.. Sellers can create Seller Seeks and a Store to inspire Seekers. The Power of the transaction is with the Seeker. All items Ship so you feel safe!</q></p>
+                    <p class="decor"><q>Seeks are what buyers create to let Sellers know they want something. Sellers can create Seller Seeks and a Store to inspire Seekers. The Power of the transaction is with the Seeker. All items Ship so you feel safe!</q></p>
                 </div>
             </div>
 
