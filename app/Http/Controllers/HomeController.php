@@ -57,7 +57,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file1')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -65,7 +65,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file2')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -73,7 +73,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file3')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -81,7 +81,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file4')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
