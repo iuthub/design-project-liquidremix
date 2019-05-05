@@ -13,4 +13,5 @@ class LandingPageController extends Controller
     	
         return view('index',['rate'=>ExchangeRate::getRates()])->withPosts($posts);
     }
+    //
 }
