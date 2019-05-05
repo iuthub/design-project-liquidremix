@@ -96,7 +96,7 @@ left:5%;
 .box:hover{
  
   box-shadow: 44px;
-  color:rgb(51, 61, 204);
+  
   transform: scale(1.05);
 }
 .box p{
@@ -119,7 +119,7 @@ font-size: 10pt;
 }
 .text-head{
   font-size: 20px;
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .ad-banner{
   background-color:wheat;
@@ -148,8 +148,8 @@ font-size: 14pt;
 .icons:hover{
   float: right;
   font-size: 24pt;
-  color:rgba(255, 0, 0, 0.596);
-  transform: scale(1.3);
+  color:rgba(255, 0, 0, 0.842);
+  transform: scale(1.2);
 }
 .profile-icon a{
 
@@ -205,11 +205,12 @@ font-size: 12pt;
   background-image: linear-gradient(45deg,rgba(235, 199, 0, 0.164),rgba(255, 255, 144, 0.425))
 }
 .product-detail{
+  margin-top:10px;
   margin-left: 10px;
   background-color: rgb(247, 242, 242);
   padding: 10px;
   border-radius: 3px;
-  box-shadow: 2px 2px 2px 2px #aaaaaa;
+  box-shadow: 2px 2px 2px 2px #e2dfdf;
   border-bottom-color: #833ab4;
   font-size: 14pt;
   margin-bottom: 10px;
@@ -343,4 +344,57 @@ margin-top: 10%;
 }
 .contact-panel{
 
-}*/
+}
+.foto-block{
+padding-left: 10%;
+padding-right: 10%;
+width: 100%;
+height:400px;
+}
+.as{
+  color:blueviolet;
+  background-color: rgb(163, 24, 24);
+}
+/*------sidebar zone---------------*/
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  height: 100%;
+  top: 47px;
+  right: 0;
+  background-color: rgb(31, 20, 20);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #bdb9b9;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 5px;;
+  right: 15px;
+  font-size: 36px;
+}
+
+.openbtn {
+  cursor: pointer;
+ 
+}
+
+.openbtn:hover {
+  background-color:rgb(228, 224, 224);
+}

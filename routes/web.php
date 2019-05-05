@@ -23,12 +23,26 @@ Route::get('/privacy-policy', function () {
     return view('policy',['rate'=>1234]);
 });
 
-Route::get('/contact', function () {
-    return view('contact',['rate'=>1234]);
-});
-Route::get('/product', function () {
-    return view('product',['rate'=>1234]);
-});
+Route::get('/contact', [
+    'uses'=>'FeedbackController@showForm',
+    'as'=>'feedback.form'
+]);
+Route::get('/post/{id}',[
+    'uses'=>'LandingPageController@getPost',
+    'as'=>'post.get'
+]);
+Route::get('post/{id}/like', [
+    'uses' => 'LandingPageController@getLikePost',
+    'as' => 'post.like'
+]);
+Route::get('/category/{category}',[
+    'uses'=>'LandingPageController@getCategory',
+    'as'=>'category'
+]);
+Route::post('/contact',[
+    'uses'=>'FeedbackController@saveFeedback',
+    'as'=>'feedback.save'
+]);
 
 Auth::routes();
 
@@ -47,6 +61,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'as'=>'home.create'
     ]);
 
+
 });
 
 Route::prefix('admin')->group(function(){
@@ -59,3 +74,21 @@ Route::get('/wishes',[
         'as'=>'home.wishes'
     ]);
 
+    Route::get('/delete/{id}',[
+        'uses'=>'HomeController@getUserDelete',
+        'as'=>'home.delete'
+    ]);
+    Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
+    Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
+
+
+Route::get('/search/{key}', [
+    'uses'=>'SearchController@showResultsPage',
+    'as'=>'show.results'
+]);

@@ -32,7 +32,7 @@ body{
 }
 .navbar-laravel{
     background: #fff;
-    box-shadow: 0.5px 0.5px 80px lightgray;
+    box-shadow: 0.5px 0.5px 50px rgb(54, 53, 53);
     
 }
 .navbar-brand{
@@ -67,9 +67,22 @@ body{
     .col-sm-4{
         display: none;
     }
- }
+}
 
 .text-reg{
     font-family: 'Pacifico', cursive;
 }
-
+#searchResults{
+    background-color: #fff;
+    text-align:left;
+    background-color: white;
+    border-radius:5px;
+    color:black;
+    
+}
+#priceDiv select{
+    margin-top: 8px;
+}
+#fieldgroup{
+    margin-bottom: 0px;
+}
