@@ -64,7 +64,7 @@
       {{ csrf_field() }}
       <div class="category"></div>
       <div class="row item">
-         <a href="{{route('category','electronics')}}" class="col item-1">
+         <a href="{{route('category',['category'=>'electronics'])}}" class="col item-1">
             <div class="item-group pointer">
                <h6><i class="fa fa-cloud"></i> Electronics</h6>
             </div>
@@ -91,7 +91,7 @@
                <h6><i class="fas fa-child"></i> Children</h6>
             </div>
          </a>
-         <a href="{{route('category','homeRealEstate')}}" class="col item-1">
+         <a href="{{route('category','home-real-estate')}}" class="col item-1">
             <div class="item-group pointer">
                <h6><i class="fas fa-home"></i> Home Real Estate</h6>
             </div>
