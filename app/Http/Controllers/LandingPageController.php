@@ -13,10 +13,11 @@ class LandingPageController extends Controller
     	
         return view('index')->withPosts($posts);
     }
-    public function getProduct($id)
+    public function getPost($id)
     {
         $post = Post::find($id);
-        return view('post')->with('post',$post);
+        $firstPhoto = $post->photos()->first()->url;
+        return view('post',['post'=>$post,'firstPhoto'=>$firstPhoto]);
     }
     //
 }
