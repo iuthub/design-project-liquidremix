@@ -10,6 +10,8 @@
         var timeout;
         $('#title').keyup(function () {
             var key = $(this).val();
+            $('#searchForm').attr('action',`/search/${key}`);
+            console.log($('#searchForm').attr('action'));
             if (key != '') {
                 var _token = $('input[name="_token"]').val();
                 if (timeout) {
@@ -28,7 +30,7 @@
                             $('#searchResults').fadeIn();
                             var res = '<ul>';
                             for (var i = 0; i < data.length; i++) {
-                                res +=`<a href="#">${data[i].title}</a><br>`
+                                res +=`<a href="/post/${data[i].id}">${data[i].title}</a><br>`
                             }
                             res += '</ul>';
                             console.log(res);
@@ -39,6 +41,8 @@
                 }, 500);
             }
         });
+        
+
     })
 </script>
 <header class=" text-white filters">
