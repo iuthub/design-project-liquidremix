@@ -18,5 +18,18 @@ class AdminController extends Controller
         return view('admin.statistics',['rate'=>ExchangeRate::getRates(),'title'=>'Hello World is beautiful']);
     }
 
+    public function acceptProduct($id){
+        $product = Post::find($id);
+        $product->status=1;
+        $product->save();
+        return redirect(route('admin.home'));
+    }
+
+    public function rejectProduct($id){
+        $product = Post::find($id);
+        $product->status = -1;
+        $product->save();
+        return redirect(route('admin.home'));
+    }
 
 }
