@@ -32,7 +32,7 @@ Route::get('/post/{id}',[
     'as'=>'post.get'
 ]);
 Route::get('post/{id}/like', [
-    'uses' => 'LandingPageController@getLikePost',
+    'uses' => 'HomeController@getLikePost',
     'as' => 'post.like'
 ]);
 Route::get('/category/{category}',[
