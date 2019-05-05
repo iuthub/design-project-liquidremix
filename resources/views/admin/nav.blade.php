@@ -27,7 +27,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light" href="{{ route('admin.home') }}">
-                    <i class="fas fa-bell"></i> New products
+                    <i class="fas fa-bell"></i> New products ( {{ $number }} )
                 </a>
             </li>
 
