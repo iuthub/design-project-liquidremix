@@ -17,14 +17,20 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="https://uzkoram.uz/wp-content/uploads/2018/04/nexia-2-blog.png" style="width: 100%; height:400px;" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="http://gmuzbekistan.uz/chevro/images/team/nexia.png" style="width: 100%; height:400px;" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://kazan.riaavto.ru/images/car/daewoo/picCar/2654/4fdenexia.png"style="width: 100%; height:400px;"   class="d-block w-100" alt="...">
-                      </div>
+                        @foreach ($post->photos as $photo)
+                        <img src="{{$photo->url}}" style="width: 100%; height:400px;" class="d-block w-100"
+                            alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://gmuzbekistan.uz/chevro/images/team/nexia.png"
+                                style="width: 100%; height:400px;" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://kazan.riaavto.ru/images/car/daewoo/picCar/2654/4fdenexia.png"
+                                style="width: 100%; height:400px;" class="d-block w-100" alt="...">
+                        </div>
+                        @endforeach
+                      
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

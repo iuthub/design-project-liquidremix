@@ -11,6 +11,11 @@ class LandingPageController extends Controller
     {
     	$posts = Post::all();
     	
-        return view('index',['rate'=>ExchangeRate::getRates()])->withPosts($posts);
+        return view('index')->withPosts($posts);
+    }
+    public function getProduct($id)
+    {
+        $post = Post::find($id);
+        return view('post')->with('post',$post);
     }
 }
