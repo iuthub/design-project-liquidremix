@@ -26,6 +26,18 @@ class LandingPageController extends Controller
         $firstPhoto = $post->photos()->first()->url;
         return view('post',['post'=>$post,'firstPhoto'=>$firstPhoto]);
 
+<<<<<<< Updated upstream
     } 
+=======
+    }
+    
+    public function getLikePost($id)
+    {
+        $post = Post::where('id', $id)->first();
+        $like = new Like();
+        $post->likes()->save($like);
+        return redirect()->back();
+    }
+>>>>>>> Stashed changes
 }
 
