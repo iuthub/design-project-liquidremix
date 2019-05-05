@@ -23,18 +23,22 @@ Route::get('/privacy-policy', function () {
     return view('policy',['rate'=>1234]);
 });
 
-Route::get('/contact', function () {
-    return view('contact',['rate'=>1234]);
-});
-Route::get('/product', function () {
-    return view('product',['rate'=>1234]);
-
-});
-Route::get('/category/{id}',[
-    'uses'=>'HomeController@getCategory',
-    'as'=>'home.category'
+Route::get('/contact', [
+    'uses'=>'FeedbackController@showForm',
+    'as'=>'feedback.form'
 ]);
-
+Route::get('/post/{id}',[
+    'uses'=>'LandingPageController@getPost',
+    'as'=>'post.get'
+]);
+Route::get('/category/{id}',[
+    'uses'=>'LandingPageController@getCategory',
+    'as'=>'category'
+]);
+Route::post('/contact',[
+    'uses'=>'FeedbackController@saveFeedback',
+    'as'=>'feedback.save'
+]);
 
 Auth::routes();
 
@@ -61,3 +65,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'as'=>'home.wishes'
     ]);
 });
+Route::get('/search/{key}', [
+    'uses'=>'SearchController@showResultsPage',
+    'as'=>'show.results'
+]);

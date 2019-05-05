@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Custom\ExchangeRate;
 use App\User;
@@ -19,7 +17,6 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -60,7 +57,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file1')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -68,7 +65,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file2')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -76,7 +73,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file3')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -84,7 +81,7 @@ class HomeController extends Controller
         {
             $path = $req->file('file4')->store('public/files');
             $photo = new PostPhoto([
-                'url'=>$path
+                'url'=>basename($path)
             ]);
             $post->photos()->save($photo);       
         }
@@ -93,9 +90,4 @@ class HomeController extends Controller
         return redirect()->route('home.index')
                 ->with('info','Ad has been sent to admin for review!');
     }
-    public function getCategory($id)
-    {
-        return view('home.category',['rate'=>ExchangeRate::getRates()]);
-    }
-
 }
