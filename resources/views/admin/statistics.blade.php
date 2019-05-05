@@ -63,7 +63,7 @@
                 "labels": ["Total rejected", "Total pure items(accepted)", "Total items(accepted and rejected)"],
                 "datasets": [{
                     "label": "Total items history",
-                    "data": [totalR, total, totalI,100],
+                    "data": [totalR, total, totalI,50],
                     "fill": false,
                     "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
                         "rgba(255, 205, 86, 0.2)"
