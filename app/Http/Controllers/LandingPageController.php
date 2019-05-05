@@ -25,5 +25,13 @@ class LandingPageController extends Controller
         return view('post',['post'=>$post,'firstPhoto'=>$firstPhoto]);
 
     }
+    
+    public function getLikePost($id)
+    {
+        $post = Post::where('id', $id)->first();
+        $like = new Like();
+        $post->likes()->save($like);
+        return redirect()->back();
+    }
 }
 
