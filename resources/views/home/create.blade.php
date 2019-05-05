@@ -89,7 +89,7 @@
                                     <label for="category">Category</label>
                                     <select class="form-control" name="category" id="category"
                                         placeholder="Choose category">
-                                        <option selected disabled">Choose...</option>
+                                        <option selected disabled>Choose...</option>
                                         <option value="electronics">Electronics</option>
                                         <option value="home-real-estate">Home Real Estate</option>
                                         <option value="clothes">Clothes</option>

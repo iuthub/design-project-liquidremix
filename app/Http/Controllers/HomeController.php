@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index',['rate'=>ExchangeRate::getRates()]);
+        $posts = Auth::user()->posts()->get();
+        return view('home.index',['posts'=>$posts]);
     }
     public function getUserCreate()
     {
