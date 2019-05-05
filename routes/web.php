@@ -53,6 +53,22 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@index',
         'as'=>'home.index'
     ]);
+
+    Route::get('/succeed',[
+        'uses'=>'HomeController@index',
+        'as'=>'home.succeed'
+    ]);
+
+    Route::get('/rejected',[
+        'uses'=>'HomeController@rejected',
+        'as'=>'home.rejected'
+    ]);
+
+    Route::get('/waiting',[
+        'uses'=>'HomeController@waiting',
+        'as'=>'home.waiting'
+    ]);
+
     Route::get('/create',[
         'uses'=>'HomeController@getUserCreate',
         'as'=>'home.create'
