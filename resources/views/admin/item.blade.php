@@ -16,10 +16,11 @@
 
                 <!--Content-->
                 <div class="card-body">
-                    <h4 class="">Card title {{ $x*10 }}</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                    <h4 class="">{{ $title }}</h4>
+                    <p class="card-text">{{ $desc }} </p>
+                    <p>{{ $price }}</p>
                     <a class="link-text">
-                        <a dialogimage="{{ $link }}" dialogtitle="Card title {{ $x*10 }}" class="opendialog" style="background: transparent; border:0;"  data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></a>
+                        <a dialogimage="{{ $link }}" dialogPrice="{{ $price }}" dialogDesc="{{ $desc }}" dialogtitle="{{ $title }}" class="opendialog" style="background: transparent; border:0;"  data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></a>
                     </a>
                 </div>
 
@@ -38,6 +39,8 @@
         $('.opendialog').click(function(){
             $('#dialog-image')[0].src = $(this)[0].attributes.dialogimage.value;
             $('.dialog-title')[0].innerHTML = $(this)[0].attributes.dialogtitle.value;
+            $('.dialog-content')[0].innerHTML = $(this)[0].attributes.dialogDesc.value;
+            $('.dialog-price')[0].innerHTML = $(this)[0].attributes.dialogPrice.value;
         });
     });
 </script>

@@ -16,6 +16,7 @@
             <div class="modal-body">
                 <h2 class="dialog-title text-center">Title content</h2>
                   <p class="dialog-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                  <p class="dialog-price text-center"></p>
             </div>
 
             <div class="modal-footer text-center">

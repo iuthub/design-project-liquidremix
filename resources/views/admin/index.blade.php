@@ -13,10 +13,14 @@
 @section('content')
     <div class="product-container">
         <div class="row">
-            @for($x=1;$x<16;$x++)
-                <?php  $link = 'https://mdbootstrap.com/img/Photos/Others/photo'.$x.'.jpg'  ?>
+            @foreach($posts as $post)
+                <?php $link = '/storage/files/'.$post->photos->first()->url;
+                      $title = $post->title;
+                      $desc = $post->description;
+                      $price = $post->price;
+                ?>
                 @include('admin.item')
-            @endfor
+            @endforeach
         </div>
     </div>
 @endsection
