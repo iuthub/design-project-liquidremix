@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $posts = Auth::user()->posts()->where('status',1)->get();
         return view('home.index',['posts'=>$posts]);
     }
