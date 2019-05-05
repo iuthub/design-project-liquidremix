@@ -8,7 +8,7 @@ class LandingPageController extends Controller
     public function getIndex()
     {
     	$posts = Post::all();
-
+        
         return view('index')->withPosts($posts);
     }
 

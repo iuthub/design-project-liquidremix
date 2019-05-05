@@ -122,14 +122,15 @@
       <div class="row">
        @foreach( $posts as $post )
         <div class="card box"style="width:210px">
-          <img class="card-img-top" src="{{ ."/app/".$post->photos[0]->url }}" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="/storage/files/{{$post->photos->first()->url}}" alt="Card image" style="width:100%">
           <div class="card-body card-content ">
             <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
             <p class="card-text">{{ $post->description }}</p>
-            <p class="card-text"><span>1,1000,000</span><span> som</span></p>
-            <a href="goods.html" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
+            <p class="card-text"><span>{{$post->price}}</span></p>
+            <a href="{{route('post.get',['id'=>$post->id])}}" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
           </div>
-
+        </div>
+          @endforeach
 
     
 
