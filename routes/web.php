@@ -60,6 +60,10 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@postUserCreate',
         'as'=>'home.create'
     ]);
+    Route::get('/delete/{id}',[
+        'uses'=>'HomeController@getUserDelete',
+        'as'=>'home.delete'
+    ]);
     Route::get('/wishes',[
         'uses'=>'HomeController@getWishesList',
         'as'=>'home.wishes'
