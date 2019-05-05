@@ -96,7 +96,7 @@ left:5%;
 .box:hover{
  
   box-shadow: 44px;
-  color:rgb(51, 61, 204);
+  
   transform: scale(1.05);
 }
 .box p{
@@ -148,8 +148,8 @@ font-size: 14pt;
 .icons:hover{
   float: right;
   font-size: 24pt;
-  color:rgba(255, 0, 0, 0.596);
-  transform: scale(1.3);
+  color:rgba(255, 0, 0, 0.842);
+  transform: scale(1.2);
 }
 .profile-icon a{
 

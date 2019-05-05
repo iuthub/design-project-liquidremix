@@ -125,7 +125,7 @@
           <img class="card-img-top" src="/storage/files/{{$post->photos->first()->url}}" alt="Card image" style="width:100%">
           <div class="card-body card-content ">
             <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">{{ $post->description }}</p>
+            <p class="card-text">{{  Str::limit($post->description, 70, ' (...)') }}</p>
             <p class="card-text"><span>{{$post->price}}</span></p>
             <a href="{{route('post.get',['id'=>$post->id])}}" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
           </div>
