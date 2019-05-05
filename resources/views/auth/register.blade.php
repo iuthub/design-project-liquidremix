@@ -1,6 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+<script>
+    $(document).ready(function(){
+        var phoneRegEx = new RegExp(/[+]\d{12}/)
+    $("input[id='phone']").keyup(function () {
+            var str = $(this).val();
+            if(str!=''){
+            if(!phoneRegEx.test(str))
+            {
+                console.log('Less');
+                $(this).removeClass("form-control").addClass("form-control is-invalid");
+            }else{
+                $(this).removeClass("form-control is-invalid").addClass("form-control");
+            }
+            }
+        });
+
+    });
+    
+</script>
 <div class="container">
     <div class="row justify-content-center section-gaping">
         <div class="col-md-8">
