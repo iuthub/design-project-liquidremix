@@ -87,7 +87,7 @@
                     <img src="http://www.raincloudmagic.com/wp-content/uploads/2011/09/propsheader-1000x300.jpg"
                         class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Storm Rain Cloud Server</h5>
+                        <h5>Storm Rain Cloud Server!</h5>
                         <p>ap into highly customizable cloud computing capacity and scale up or down based on real-time demands, and enjoy the flexibility of securing VMs on a yearly subscription or pay on demand. Now you can focus on your business priorities and free yourself from procuring expensive IT infrastructure and hiring large network teams</p>
                     </div>
                 </div>
