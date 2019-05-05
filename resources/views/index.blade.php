@@ -115,7 +115,7 @@
   
   <div class="container">
     <div class="row">
-      <h1 class="text-center">Premium Products</h1>
+      <h1 class="text-center">Posts/Advertisements</h1>
     </div>
  
     <div class="box-panel">
