@@ -92,7 +92,7 @@
                         @else
 
                         @if (Auth::user())
-                        <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                    <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes<span class="badge badge-light"></span></a>
                       <!--<a  class="btn  openbtn" onclick="openNav()"><i class="fas fa-store"></i> CART SIDE</a>-->
 
                         <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
@@ -105,7 +105,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="{{route('home.index')}}" class="dropdown-item">My account</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Successed</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Rejected</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Waiting..</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
@@ -165,10 +167,7 @@
                 </div>
                 <div class="col col-md">
 
-                    <p class="decor"><q>Democracy must be built through open societies that share information.
-                            When there is information, there is enlightenment. When there is debate,
-                            are solutions. When there is no sharing of power, no rule of law, no accountability,
-                            there is abuse, corruption, subjugation and indignation</q></p>
+                    <p class="decor"><q>Seeks are what buyers create to let Sellers know they want something. Sellers can create Seller Seeks and a Store to inspire Seekers. The Power of the transaction is with the Seeker. All items Ship so you feel safe!</q></p>
                 </div>
             </div>
 
