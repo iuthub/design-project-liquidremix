@@ -26,10 +26,10 @@ Route::get('/privacy-policy', function () {
 Route::get('/contact', function () {
     return view('contact',['rate'=>1234]);
 });
-Route::get('/product', function () {
-    return view('product',['rate'=>1234]);
-
-});
+Route::get('/post/{id}',[
+    'uses'=>'LandingPageController@getPost',
+    'as'=>'post.get'
+]);
 Route::get('/category/{id}',[
     'uses'=>'HomeController@getCategory',
     'as'=>'home.category'
