@@ -21,15 +21,15 @@
 
             <div class="modal-footer text-center">
 
-                <button type="button" class="btn btn-outline-danger waves-effect">
+                <a href="{{ route('admin.reject',['id'=>$post->id]) }}" style="margin-left: 10px;" class="btn btn-outline-danger waves-effect">
                     <span class="value">Reject</span>
                     <i class="far fa-thumbs-down ml-1"></i>
-                </button>
+                </a>
 
-                <button type="button" style="margin-left: 10px;" class="btn btn-outline-success waves-effect" data-dismiss="modal">
+                <a class="btn btn-outline-success waves-effect" href="{{ route('admin.accept',['id'=>$post->id]) }}" style="margin-left: 10px;" >
                     <span class="value">Accept</span>
                     <i class="far fa-thumbs-up ml-1"></i>
-                </button>
+                </a>
 
             </div>
         </div>

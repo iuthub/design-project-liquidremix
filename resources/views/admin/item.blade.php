@@ -16,11 +16,11 @@
 
                 <!--Content-->
                 <div class="card-body">
-                    <h4 class="">{{ $title }}</h4>
-                    <p class="card-text">{{ $desc }} </p>
-                    <p>{{ $price }}</p>
+                    <h4 class="">{{ $post->title }}</h4>
+                    <p class="card-text">{{ $post->description }} </p>
+                    <p>{{ $post->price }}</p>
                     <a class="link-text">
-                        <a dialogimage="{{ $link }}" dialogPrice="{{ $price }}" dialogDesc="{{ $desc }}" dialogtitle="{{ $title }}" class="opendialog" style="background: transparent; border:0;"  data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></a>
+                        <a dialogimage="{{ $link }}" dialogPrice="{{ $post->price }}" dialogDesc="{{ $post->description }}" dialogtitle="{{ $post->title }}" class="opendialog" style="background: transparent; border:0;"  data-toggle="modal" data-target="#exampleModalPopovers">Read more <i class="fas fa-angle-double-right"></i></a>
                     </a>
                 </div>
 

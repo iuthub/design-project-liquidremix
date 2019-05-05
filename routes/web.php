@@ -31,6 +31,7 @@ Route::get('/post/{id}',[
     'uses'=>'LandingPageController@getPost',
     'as'=>'post.get'
 ]);
+
 Route::get('post/{id}/like', [
     'uses' => 'HomeController@getLikePost',
     'as' => 'post.like'
@@ -67,6 +68,8 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
 Route::prefix('admin')->group(function(){
     Route::get('/','AdminController@getAdmin')->name('admin.home');
     Route::get('/statics','AdminController@getStatistics')->name('admin.statics');
+    Route::get('/accept/{id}','AdminController@acceptProduct')->name('admin.accept');
+    Route::get('/reject/{id}','AdminController@rejectProduct')->name('admin.reject');
 });
 
 Route::get('/wishes',[

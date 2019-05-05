@@ -23,6 +23,7 @@
                <canvas id="horizontalBar"></canvas>
            </div>
        </div>
+       <div class="dataHolder" rejected="{{ $rejected }}" accepted="{{ $success }}" news="{{ $news }}" total="{{ $total }}"></div>
    </div>
 
 @endsection
@@ -31,9 +32,10 @@
 @section('js')
     <script>
         //pie
-        let rejected = 50;
-        let accepted = 100;
-        let newp = 200;
+        let rejected = document.getElementsByClassName('dataHolder')[0].attributes.rejected.value;
+        let accepted = document.getElementsByClassName('dataHolder')[0].attributes.accepted.value;
+        let newp = document.getElementsByClassName('dataHolder')[0].attributes.news.value;
+
         var ctxP = document.getElementById("pieChart").getContext('2d');
         var myPieChart = new Chart(ctxP, {
             type: 'pie',
@@ -50,9 +52,9 @@
             }
         });
 
-        let totalR = 10;
-        let total = 50;
-        let totalI=60;
+        let totalR = rejected;
+        let total = rejected+accepted+newp;
+        let totalI=newp;
 
         //Details
         new Chart(document.getElementById("horizontalBar"), {
@@ -61,7 +63,7 @@
                 "labels": ["Total rejected", "Total pure items(accepted)", "Total items(accepted and rejected)"],
                 "datasets": [{
                     "label": "Total items history",
-                    "data": [totalR, total, totalI,100],
+                    "data": [totalR, total, totalI,50],
                     "fill": false,
                     "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
                         "rgba(255, 205, 86, 0.2)"
