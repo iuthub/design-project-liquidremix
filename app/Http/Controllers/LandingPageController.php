@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Custom\ExchangeRate;
 use App\Post;
+use App\Like;
 class LandingPageController extends Controller
 {
     public function getIndex()
