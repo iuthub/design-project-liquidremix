@@ -50,6 +50,7 @@ color:rgb(223, 223, 223);
 
 
 .item-group{
+text-decoration: none;
 display: inline-flex;
 position: relative;
 top:18%;
