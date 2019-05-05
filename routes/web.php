@@ -23,9 +23,10 @@ Route::get('/privacy-policy', function () {
     return view('policy',['rate'=>1234]);
 });
 
-Route::get('/contact', function () {
-    return view('contact',['rate'=>1234]);
-});
+Route::get('/contact', [
+    'uses'=>'FeedbackController@showForm',
+    'as'=>'feedback.form'
+]);
 Route::get('/post/{id}',[
     'uses'=>'LandingPageController@getPost',
     'as'=>'post.get'
@@ -34,7 +35,10 @@ Route::get('/category/{id}',[
     'uses'=>'HomeController@getCategory',
     'as'=>'home.category'
 ]);
-
+Route::post('/contact',[
+    'uses'=>'FeedbackController@saveFeedback',
+    'as'=>'feedback.save'
+]);
 
 Auth::routes();
 
