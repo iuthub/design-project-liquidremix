@@ -60,6 +60,20 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@postUserCreate',
         'as'=>'home.create'
     ]);
+
+
+});
+
+Route::prefix('admin')->group(function(){
+    Route::get('/','AdminController@getAdmin')->name('admin.home');
+    Route::get('/statics','AdminController@getStatistics')->name('admin.statics');
+});
+
+Route::get('/wishes',[
+        'uses'=>'HomeController@getWishesList',
+        'as'=>'home.wishes'
+    ]);
+
     Route::get('/delete/{id}',[
         'uses'=>'HomeController@getUserDelete',
         'as'=>'home.delete'
@@ -72,7 +86,8 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'uses'=>'HomeController@getWishesList',
         'as'=>'home.wishes'
     ]);
-});
+
+
 Route::get('/search/{key}', [
     'uses'=>'SearchController@showResultsPage',
     'as'=>'show.results'
