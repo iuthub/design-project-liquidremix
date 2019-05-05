@@ -10,6 +10,8 @@
         var timeout;
         $('#title').keyup(function () {
             var key = $(this).val();
+            $('#searchForm').attr('action',`/search/${key}`);
+            console.log($('#searchForm').attr('action'));
             if (key != '') {
                 var _token = $('input[name="_token"]').val();
                 if (timeout) {
@@ -28,7 +30,7 @@
                             $('#searchResults').fadeIn();
                             var res = '<ul>';
                             for (var i = 0; i < data.length; i++) {
-                                res +=`<a href="#">${data[i].title}</a><br>`
+                                res +=`<a href="/post/${data[i].id}">${data[i].title}</a><br>`
                             }
                             res += '</ul>';
                             console.log(res);
@@ -39,6 +41,8 @@
                 }, 500);
             }
         });
+        
+
     })
 </script>
 <header class=" text-white filters">
@@ -108,33 +112,29 @@
 </header>
 
 <section id="about">
-
-    <div class="container">
-        <div class="row">
-            <h1 class="text-center">Premium Products</h1>
-        </div>
-
-        <div class="box-panel">
-            <div class="row">
-                <div class="card box" style="width:210px">
-                    <img class="card-img-top" src="http://storage.kun.uz/source/mirkov-tash-1.jpg" alt="Card image"
-                        style="width:100%">
-                    <div class="card-body card-content ">
-                        <h4 class="card-title">Carpet<span id="value-product"><i class="fas fa-check-circle"></i></span>
-                        </h4>
-                        <p class="card-text">Some example text some example text. John Doe is an architecSome exa Doe is
-                            an architectt and engineer</p>
-                        <p class="card-text"><span>1,1000,000</span><span> som</span></p>
-                        <a href="goods.html" class="btn btn-outline-danger">View Product</a><i
-                            class="fas fa-cart-plus icons"></i>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
+  
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">Premium Products</h1>
     </div>
+ 
+    <div class="box-panel">
+      <div class="row">
+       @foreach( $posts as $post )
+        <div class="card box"style="width:210px">
+          <img class="card-img-top" src="/storage/files/{{$post->photos->first()->url}}" alt="Card image" style="width:100%">
+          <div class="card-body card-content ">
+            <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
+            <p class="card-text">{{ $post->description }}</p>
+            <p class="card-text"><span>{{$post->price}}</span></p>
+            <a href="{{route('post.get',['id'=>$post->id])}}" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
+          </div>
+        </div>
+          @endforeach
+
+    
+
+
 </section>
 
 <section id="services" class="bg-light">
