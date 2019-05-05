@@ -45,7 +45,7 @@ Route::post('/contact',[
 ]);
 
 Auth::routes();
-
+//
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
     Route::get('',[
