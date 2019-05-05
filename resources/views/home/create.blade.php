@@ -101,7 +101,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Description</label>
+                                    <label for="description">Description (min 10 characters)</label>
                                     <textarea type="text" class="form-control" id="description" rows="3"
                                         name="description"></textarea>
                                 </div>

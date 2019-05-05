@@ -41,17 +41,17 @@
 <body>
     <script>
         $(document).ready(function(){
-            // $.ajax({
-            // url: 'http://data.fixer.io/api/latest?access_key=afd6c48270d18d80d6740d5fc77c4b1c&format=1',
-            // method: "GET",
-            // success: function (data) {
-            //     var rate = (data.rates.UZS / data.rates.USD).toFixed(2);
-            //     console.log(rate);
-            //     var result = `<i class="fas fa-dollar-sign"></i>
-            //                 <span class="navbar-text" id="alltext">1 USD=${rate} UZS</span>`;
-            //     $('#rates').html(result);
-            //  }
-            // });
+            $.ajax({
+            url: 'http://data.fixer.io/api/latest?access_key=afd6c48270d18d80d6740d5fc77c4b1c&format=1',
+            method: "GET",
+            success: function (data) {
+                var rate = (data.rates.UZS / data.rates.USD).toFixed(2);
+                console.log(rate);
+                var result = `<i class="fas fa-dollar-sign"></i>
+                            <span class="navbar-text" id="alltext">1 USD=${rate} UZS</span>`;
+                $('#rates').html(result);
+             }
+            });
     });
 
     </script>
