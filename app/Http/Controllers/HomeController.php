@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Custom\ExchangeRate;
 use App\User;
 use App\Post;
+use App\Like;
 use App\PostPhoto;
 use Auth;
 class HomeController extends Controller
@@ -33,7 +34,18 @@ class HomeController extends Controller
     }
     public function getWishesList()
     {
-        return view('home.wishes',['rate'=>ExchangeRate::getRates()]);
+        $likes = Like::where('user_id',Auth::user()->id)->get();
+        $posts = Post::all();
+        return(view('home.wishes',['posts'=>$posts,'likes'=>$likes]));
+    }
+    public function getLikePost($id)
+    {
+        $post = Post::find($id);
+        $like = new Like([
+            'user_id'=>Auth::user()->id
+        ]);
+        $post->likes()->save($like);
+        return redirect()->back();
     }
     public function getUserDelete($id)
     {
