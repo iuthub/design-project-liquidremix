@@ -8,7 +8,7 @@ class LandingPageController extends Controller
     public function getIndex()
     {
     	$posts = Post::all();
-    	
+        
         return view('index')->withPosts($posts);
     }
 
@@ -22,6 +22,7 @@ class LandingPageController extends Controller
         $post = Post::find($id);
         $firstPhoto = $post->photos()->first()->url;
         return view('post',['post'=>$post,'firstPhoto'=>$firstPhoto]);
+
     }
 }
 
