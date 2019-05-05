@@ -61,3 +61,7 @@ Route::group(['prefix' => 'home','middleware'=>['auth']],function(){
         'as'=>'home.wishes'
     ]);
 });
+Route::get('/search/{key}', [
+    'uses'=>'SearchController@showResultsPage',
+    'as'=>'show.results'
+]);

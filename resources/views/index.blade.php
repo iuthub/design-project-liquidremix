@@ -10,6 +10,8 @@
         var timeout;
         $('#title').keyup(function () {
             var key = $(this).val();
+            $('#searchForm').attr('action',`/search/${key}`);
+            console.log($('#searchForm').attr('action'));
             if (key != '') {
                 var _token = $('input[name="_token"]').val();
                 if (timeout) {
@@ -29,7 +31,7 @@
                             $('#searchResults').fadeIn();
                             var res = '<ul>';
                             for (var i = 0; i < data.length; i++) {
-                                res +=`<a href="#">${data[i].title}</a><br>`
+                                res +=`<a href="/post/${data[i].id}">${data[i].title}</a><br>`
                             }
                             res += '</ul>';
                             console.log(res);
@@ -41,6 +43,8 @@
 
             }
         });
+        
+
     })
 
 </script>
@@ -54,14 +58,26 @@
         <h1 class="text">{{ config('app.name','melon') }}</h1>
         <p class="lead">Find anything, sell anything</p>
         <div>
+            
+                <form action="" method="get" id="searchForm">
+                        <div class="input-group mb-3" id="fieldgroup">
+                        <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit" id="searchButton">Search</button>
+                        </div>
+                       </div>
+                </form>
+                
+                 
+            
             <div class="form-group">
-                <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div id="searchResults">
+                    <div id="searchResults">
                     
                    
-                </div>   
+                        </div>
             </div>
+              
         </div>
         {{ csrf_field() }}
         <div class="category"></div>

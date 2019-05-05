@@ -83,3 +83,6 @@ body{
 #priceDiv select{
     margin-top: 8px;
 }
+#fieldgroup{
+    margin-bottom: 0px;
+}
