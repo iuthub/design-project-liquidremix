@@ -139,7 +139,7 @@
       <div class="row">
        @foreach( $posts as $post )
         <div class="card box"style="width:210px">
-          <img class="card-img-top" src="http://storage.kun.uz/source/mirkov-tash-1.jpg" alt="Card image" style="width:100%">
+          <img class="card-img-top" src="{{ storage_path()."/app/".$post->photos[0]->url }}" alt="Card image" style="width:100%">
           <div class="card-body card-content ">
             <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
             <p class="card-text">{{ $post->description }}</p>

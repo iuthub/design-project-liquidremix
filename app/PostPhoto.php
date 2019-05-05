@@ -9,6 +9,6 @@ class PostPhoto extends Model
     protected $fillable = ['url'];
     public function post()
     {
-        return $this->belongsTo('App\Post','post_id');
+        return $this->belongsTo('App\Post','post_id', 'id');
     }
 }
