@@ -12,9 +12,10 @@ class LandingPageController extends Controller
         return view('index')->withPosts($posts);
     }
 
-    public function getCategory($id)
+    public function getCategory($category)
     {
-        return view('category',['rate'=>ExchangeRate::getRates()]);
+    	$posts = Post::where('category', $category)->get();
+        return view('category',['posts'=>$posts]);
     }
 
     public function getPost($id)

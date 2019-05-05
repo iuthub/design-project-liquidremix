@@ -30,7 +30,7 @@ Route::get('/post/{id}',[
     'uses'=>'LandingPageController@getPost',
     'as'=>'post.get'
 ]);
-Route::get('/category/{id}',[
+Route::get('/category/{category}',[
     'uses'=>'LandingPageController@getCategory',
     'as'=>'category'
 ]);
