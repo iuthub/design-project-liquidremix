@@ -1,84 +1,51 @@
 @extends('layouts.app')
 @section('content')
+<script>
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+  $(document).ready(function () {
+      var timeout;
+      $('#title').keyup(function () {
+          var key = $(this).val();
+          $('#searchForm').attr('action',`/search/${key}`);
+          console.log($('#searchForm').attr('action'));
+          if (key != '') {
+              var _token = $('input[name="_token"]').val();
+              if (timeout) {
+                  clearTimeout(timeout);
+              }
+              timeout = setTimeout(() => {
+                  $.ajax({
+                      url: `/api/search/${key}`,
+                      method: "GET",
+                      dataType: "json",
+                      data: {
+                          _token: _token
+                      },
+                      success: function (data) {
+                          //console.log(data[0]);
+                          $('#searchResults').fadeIn();
+                          var res = '<ul>';
+                          for (var i = 0; i < data.length; i++) {
+                              res +=`<a href="/post/${data[i].id}">${data[i].title}</a><br>`
+                          }
+                          res += '</ul>';
+                          console.log(res);
+                          //Used jQuery's docs for the line below line. http://api.jquery.com/html/
+                          $('#searchResults').html(res);
+                      }
+                  });
+              }, 500);
+          }
+      });
+      
 
-<header class=" text-white filters">
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-        <div class="card card-body">
-
-        </div>
-    </div>
-    <div class="container text-center">
-        <h1 class="text">{{ config('app.name','melon') }}</h1>
-        <p class="lead">Find anything, sell anything</p>
-        <div>
-            <div class="form-group">
-                <input type="text" name="title" id="title" class="form-control input-lg" placeholder="Search">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div id="searchResults">
-                    
-                   
-                </div>   
-            </div>
-        </div>
-        {{ csrf_field() }}
-        <div class="category"></div>
-
-        <div class="row item">
-          <a href="{{route('category','electronics')}}" class="col item-1">
-            <div class="item-group pointer"> 
-              <h6><i class="fa fa-cloud"></i> Electronics</h6> 
-            </div>
-          </a>
-            <a href="{{route('category','garden')}}" class="col item-1">
-                <div class="item-group pointer">
-                
-                  <h6><i class="fa fa-cloud"></i> Garden</h6>
-
-                </div>
-            </a>
-        
-        <a href="{{route('category','clothes')}}" class="col item-1">
-            <div class="item-group pointer">
-              <h6>  <i class="fas fa-tshirt"></i> Clothes </h6>
-            </div>
-        </a>
-        <a href="{{route('category','services')}}" class="col item-1">
-            <div class="item-group pointer"> 
-              <h6><i class="fas fa-concierge-bell"></i> Services </h6>
-            </div>
-        </a>
-        
-    </div>
-        <div class="row item">
-            <a href="{{route('category','children')}}" class="col item-1">
-                <div class="item-group pointer">
-                <h6><i class="fas fa-child"></i> Children</h6> 
-              </div>
-            </a>
-           
-            <a href="{{route('category','home-real-estate')}}" class="col item-1">
-                <div class="item-group pointer">
-                
-                  <h6><i class="fas fa-home"></i> Home Real Estate</h6>
-              </div>
-            </a>
-            <a href="{{route('category','fashion')}}" class="col item-1">
-                <div class="item-group pointer">
-                 
-                  <h6> <i class="fas fa-tshirt"></i> Fashion </h6>
-              </div>
-            </a>
-            <a href="{{route('category','cars')}}" class="col item-1">
-                <div class="item-group pointer">
-                 
-                  <h5> <i class="fas fa-car"></i>  Cars </h5>
-              </div>
-            </a>
-          </div>
-
-    </div>
-    </div>
-</header>
+  })
+</script>
+@include('partials.header')
 
 <section id="services" class="bg-light">
 
@@ -95,7 +62,7 @@
 
         <div class="col-lg-8 mx-auto">
 
-          <h2 class="">Top Advertisement</h2><br>
+          <h2 class="">Posts/Advertisements</h2><br>
           @foreach ($posts as $post)
             <a href="{{route('post.get',['id'=>$post->id])}}" class="card mb-3 boxing" style="max-width: 740px;">
               <div class="row no-gutters">
@@ -113,7 +80,7 @@
                      <p class="card-text">
                       {{$post->description}}
                     </p>
-                    <p class="card-text"><small class="text-muted"><i class="fas fa-thumbtack"></i>Mirzo Ulugbek rg, Olimlar street</small><small><i style="color:burlywood; padding-left: 10%;" class="fas fa-history"></i>Time: 29/02/2019</small><span class="like" style="float:right; font-size:15pt;"><i id="like-heart" class="far fa-heart"></i></span></p>
+                  <p class="card-text"><small class="text-muted"><i class="fas fa-thumbtack"></i> Posted by: {{$post->user->name}}</small><small><i style="color:burlywood; padding-left: 10%;" class="fas fa-history"></i>Time: 29/02/2019</small><span class="like" style="float:right; font-size:15pt;"><i id="like-heart" class="far fa-heart"></i></span></p>
                   </div>
                 </div>
               </div>
