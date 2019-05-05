@@ -92,7 +92,7 @@
                         @else
 
                         @if (Auth::user())
-                        <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes</a>
+                    <a href="{{route('home.wishes')}}" class="btn"><i class="fas fa-store"></i> Wishes<span class="badge badge-light"></span></a>
                       <!--<a  class="btn  openbtn" onclick="openNav()"><i class="fas fa-store"></i> CART SIDE</a>-->
 
                         <a href="{{ route('home.create') }}" class="btn btn-success">+POST</a>
@@ -105,7 +105,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a href="{{route('home.index')}}" class="dropdown-item">My account</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Successed</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Rejected</a>
+                                <a href="{{route('home.index')}}" class="dropdown-item">Waiting..</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
