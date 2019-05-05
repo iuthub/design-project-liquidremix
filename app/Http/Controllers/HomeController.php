@@ -25,10 +25,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $posts = Auth::user()->posts()->where('status',1)->get();
         return view('home.index',['posts'=>$posts]);
     }
+
+    public function rejected()
+    {
+        $posts = Auth::user()->posts()->where('status',-1)->get();
+        return view('home.index',['posts'=>$posts]);
+    }
+
+    public function waiting()
+    {
+        $posts = Auth::user()->posts()->where('status',0)->get();
+        return view('home.index',['posts'=>$posts]);
+    }
+
+
     public function getUserCreate()
     {
         return view('home.create',['rate'=>ExchangeRate::getRates()]);
