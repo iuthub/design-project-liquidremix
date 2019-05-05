@@ -18,4 +18,5 @@ class LandingPageController extends Controller
         $post = Post::find($id);
         return view('post')->with('post',$post);
     }
+    //
 }
