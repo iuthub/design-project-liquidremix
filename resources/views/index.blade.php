@@ -45,27 +45,6 @@
 
 </script>
 <header class=" text-white filters">
-<<<<<<< HEAD
-  
-  <div class="container text-center">
-    <h1 class="text">{{ config('app.name','melon') }}</h1>
-    <p class="lead">Find anything, sell anything</p>
-    <div>
-      <form action="#" method="post" novalidate="novalidate">
-        <div class="row">
-          
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Item you want to seach..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <select class="custom-select" id="inputGroupSelect04">
-              <option selected>Choose region</option>
-              <option value="1">Tashkent</option>
-              <option value="2">Andijan</option>
-              <option value="3">Bukhara</option>
-              <option value="4">Navai</option>
-            </select>
-            <div class="input-group-append">
-              <button class="btn btn-success" type="button">Search</button>
-=======
     <div class="collapse multi-collapse" id="multiCollapseExample1">
         <div class="card card-body">
 
@@ -82,7 +61,6 @@
                     
                    
                 </div>   
->>>>>>> a67e9ab66272d1cb9af07f4eecdd6c82b3ac7960
             </div>
         </div>
         {{ csrf_field() }}
@@ -148,24 +126,6 @@
 
 
 <section id="about">
-<<<<<<< HEAD
-  <div class="container">
-    <div class="row">
-      <h1 class="text-center">Premium Products</h1>
-    </div>
- 
-    <div class="box-panel">
-      <div class="row">
-       @foreach( $posts as $post )
-        <div class="card box"style="width:210px">
-          <img class="card-img-top" src="http://storage.kun.uz/source/mirkov-tash-1.jpg" alt="Card image" style="width:100%">
-          <div class="card-body card-content ">
-            <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">{{ $post->description }}</p>
-            <p class="card-text"><span>{{$post->price}}</span></p>
-            <a href="goods.html" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
-          </div>
-=======
 
     <div class="container">
         <div class="row">
@@ -190,7 +150,6 @@
 
 
             </div>
->>>>>>> a67e9ab66272d1cb9af07f4eecdd6c82b3ac7960
         </div>
 
     </div>
