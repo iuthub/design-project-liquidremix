@@ -28,29 +28,34 @@
                           <div class="card-body  text-center">
                             <h5 class="card-title">What we focus on?</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad et laudantium facere accusantium velit itaque animi ducimus iste, sequi, quasi ea voluptatibus at nisi cumque voluptatem accusamus, fugiat consectetur.</p>
+                            <p>Private ads of Uzbekistan on MELON - here you will find what you were looking for.
+                              By clicking on the "POST" button, you will be able to put your announcement  online and choose any category you need – Electronics, Vacancies, Clothes, Services, Children, Home Real Estate, Jobs,Vehicles and more.
+                              With the help of MELON service in Uzbekistan you can find, sell or buy almost anything you want. Using the search function, you can easily find already published ads of topics that interest you.</p>
                           </div>
                          <div class="card-group ">
                           <div class="card text-white bg-secondary mb-3 mybox" style="max-width: 18rem;">
                                   <div class="card-header">Saidakbar MakhmudKhujaev</div>
                                   <div class="card-body">
-                                    <h5 class="card-title">Secondary card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h5 class="card-title">Contact info:</h5>
+                                    <p class="card-text">My name is Saidakbar. Here my job is to maintain the workablity of certain JS and UI</p>
+                                    <p class="card-text">Find me: <span id="icon-footer"><i class="fab fa-facebook"></i> <i class="fab fa-telegram"></i> </span></p>
                                   </div>
                                 </div>
-                                <div class="card text-white bg-success mb-3 mybox" style="max-width: 18rem;">
+                                <div class="card text-white bg-secondary mb-3 mybox" style="max-width: 18rem;">
                                   <div class="card-header">Azamat Abdullaev</div>
                                   <div class="card-body">
-                                    <h5 class="card-title">Success card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  </div>
+                                    <h5 class="card-title">Contact info:</h5>
+                                    <p class="card-text">My name is Azamat. Here my job is to maintain the workablity of certain JS and UI</p>
+                                    <p class="card-text">Find me: <span id="icon-footer"><i class="fab fa-facebook"></i> <i class="fab fa-telegram"></i> </span></p>
+                                   </div>
                                 </div>
-                                <div class="card text-white bg-danger mb-3 mybox"  style="max-width: 18rem;">
+                                <div class="card text-white bg-secondary mb-3 mybox"  style="max-width: 18rem;">
                                   <div class="card-header">Makhmudjon Inadullaev</div>
                                   <div class="card-body">
-                                    <h5 class="card-title">Danger card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  </div>
+                                    <h5 class="card-title">Contact info:</h5>
+                                    <p class="card-text">My name is Makhmudjon. Here my job is to maintain the workablity of certain JS and UI</p>
+                                    <p class="card-text">Find me: <span id="icon-footer"><i class="fab fa-facebook"></i> <i class="fab fa-telegram"></i> </span></p>
+                                 </div>
                                 </div>
                           
                                       </div>
@@ -59,16 +64,18 @@
                                               <div class="card text-white bg-secondary mb-3 mybox2" style="max-width: 18rem;">
                                                       <div class="card-header">Khalikov Khamidulloh</div>
                                                       <div class="card-body">
-                                                        <h5 class="card-title">Secondary card title</h5>
-                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                      </div>
+                                                        <h5 class="card-title">Contact info:</h5>
+                                                        <p class="card-text">My name is Khamidulloh. Here my job is to maintain the workablity of certain JS and UI</p>
+                                    <p class="card-text">Find me: <span id="icon-footer"><i class="fab fa-facebook"></i> <i class="fab fa-telegram"></i> </span></p>
+                                  </div>
                                                     </div>
-                                                    <div class="card text-white bg-dark mb-3 mybox2" style="max-width: 18rem;">
-                                                          <div class="card-header">Abdurakhmon</div>
+                                                    <div class="card text-white bg-secondary mb-3 mybox2" style="max-width: 18rem;">
+                                                          <div class="card-header">Urazboev Abdurakhmon</div>
                                                           <div class="card-body">
-                                                            <h5 class="card-title">Dark card title</h5>
-                                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                          </div>
+                                                            <h5 class="card-title">Contact info:</h5>
+                                                            <p class="card-text">My name is Abdurakhmon. Here my job is to maintain the workablity of certain JS and UI</p>
+                                    <p class="card-text">Find me: <span id="icon-footer"><i class="fab fa-facebook"></i> <i class="fab fa-telegram"></i> </span></p>
+                                   </div>
                                                         </div>
                                                    
                                               
