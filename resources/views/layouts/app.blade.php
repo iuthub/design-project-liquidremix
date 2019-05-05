@@ -53,7 +53,11 @@
              }
             });
     });
-
+    $(document).ready(function(){
+        $('img').attr('alt','Image is not showing because of Heroku limitations. Works fine locally!!!')
+    console.log($('img').attr('alt'));
+    })
+    
     </script>
     <div id="app">
         <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-laravel">
