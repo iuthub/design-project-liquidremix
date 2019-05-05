@@ -54,7 +54,7 @@
         <div class="col">
           <div class="panel-col" style="backgound:blue; margin-top:16%;">
             <figure class="figure">
-                <img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/20479841_1880984015561754_5620100286034227693_n.jpg?_nc_cat=107&_nc_ht=scontent-arn2-2.xx&oh=70f1bf89fb3ca9155b17ff6cb9470c28&oe=5D2EBA93" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <a href="https://allplay.uz/"><img src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.0-9/20479841_1880984015561754_5620100286034227693_n.jpg?_nc_cat=107&_nc_ht=scontent-arn2-2.xx&oh=70f1bf89fb3ca9155b17ff6cb9470c28&oe=5D2EBA93" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."></a>
                 <figcaption class="figure-caption">get it right now!</figcaption>
               </figure>
         </div>

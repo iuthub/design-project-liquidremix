@@ -163,10 +163,7 @@
                 </div>
                 <div class="col col-md">
 
-                    <p class="decor"><q>Democracy must be built through open societies that share information.
-                            When there is information, there is enlightenment. When there is debate,
-                            are solutions. When there is no sharing of power, no rule of law, no accountability,
-                            there is abuse, corruption, subjugation and indignation</q></p>
+                    <p class="decor"><q>Seeks are what buyers create to let Sellers know they want something. Sellers can create Seller Seeks and a Store to inspire Seekers. The Power of the transaction is with the Seeker. All items Ship so you feel safe!</q></p>
                 </div>
             </div>
 

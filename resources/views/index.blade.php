@@ -101,8 +101,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://static1.squarespace.com/static/57dea572579fb3ea46810d43/t/580e06ddd1758e7907272fdc/1477314272980/Background+B+1000x300.png?format=2500w"
-                        class="d-block w-100" alt="...">
+                <img src="{{asset('img/ads.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
