@@ -25,7 +25,8 @@ class LandingPageController extends Controller
         $post = Post::find($id);
         $firstPhoto = $post->photos()->first()->url;
         return view('post',['post'=>$post,'firstPhoto'=>$firstPhoto]);
-    }
+    } 
+    
     public function getLikePost($id)
     {
         $post = Post::where('id', $id)->first();
