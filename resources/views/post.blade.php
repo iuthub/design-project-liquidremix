@@ -2,12 +2,11 @@
 @section('content')
 <section id="services" class="bg-light">
         <div class="container">
-        
               <nav aria-label="breadcrumb" class="nav-route">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    <li class="breadcrumb-item"><a href="#">Home page</a></li>
+                  <li class="breadcrumb-item"><a href="{{route('category',['category'=>$post->category])}}">Category</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">product view</li>
                   </ol>
                 </nav>
           
@@ -19,18 +18,18 @@
                       
                       @foreach ($post->photos as $photo)
                       <div class="carousel-item{{$loop->index==0 ? ' active':''}}">
-                      <img src="/storage/files/{{$photo->url}}" style="width: 100%; height:400px;" class="d-block w-100"
-                            alt="...">
-                        </div>
+                      <img src="/storage/files/{{$photo->url}}"  class="foto-block d-block"
+                            alt="photos">
+                        </div><!--w-100-->
                         @endforeach
                                               
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-prev-icon as" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-next-icon as" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
