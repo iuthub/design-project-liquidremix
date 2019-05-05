@@ -90,11 +90,7 @@
                                     <select class="form-control" name="category" id="category"
                                         placeholder="Choose category">
                                         <option selected disabled>Choose...</option>
-                                        <option value="children">Children</option>
-                                        <option value="garden">Garden</option>
-                                        <option value="clothers">Clothes</option>
-                                        <option value="services">Services</option>
-                                        <option value="children">Children</option>
+                                        <option value="electronics">Electronics</option>
                                         <option value="home-real-estate">Home Real Estate</option>
                                         <option value="clothes">Clothes</option>
                                         <option value="jobs">Jobs</option>
