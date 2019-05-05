@@ -45,11 +45,7 @@
 
 </script>
 <header class=" text-white filters">
-  <div class="collapse multi-collapse" id="multiCollapseExample1">
-    <div class="card card-body">
-      azamat and saidakbar
-    </div>
-  </div>
+  
   <div class="container text-center">
     <h1 class="text">{{ config('app.name','melon') }}</h1>
     <p class="lead">Find anything, sell anything</p>
@@ -143,7 +139,7 @@
           <div class="card-body card-content ">
             <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
             <p class="card-text">{{ $post->description }}</p>
-            <p class="card-text"><span>1,1000,000</span><span> som</span></p>
+            <p class="card-text"><span>{{$post->price}}</span></p>
             <a href="goods.html" class="btn btn-outline-danger">View Product</a><i class="fas fa-cart-plus icons"></i>
           </div>
         </div>
