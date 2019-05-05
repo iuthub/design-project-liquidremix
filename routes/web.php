@@ -32,8 +32,8 @@ Route::get('/post/{id}',[
     'as'=>'post.get'
 ]);
 Route::get('/category/{id}',[
-    'uses'=>'HomeController@getCategory',
-    'as'=>'home.category'
+    'uses'=>'LandingPageController@getCategory',
+    'as'=>'category'
 ]);
 Route::post('/contact',[
     'uses'=>'FeedbackController@saveFeedback',
