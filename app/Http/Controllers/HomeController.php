@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index',['rate'=>ExchangeRate::getRates()]);
+        $posts = Auth::user()->posts()->get();
+        return view('home.index',['posts'=>$posts]);
     }
     public function getUserCreate()
     {
@@ -45,6 +46,12 @@ class HomeController extends Controller
         ]);
         $post->likes()->save($like);
         return redirect()->back();
+    }
+    public function getUserDelete($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('home.index')->with('deleteinfo','Post/Ad deleted!');
     }
     public function postUserCreate(Request $req)
     {
@@ -100,6 +107,6 @@ class HomeController extends Controller
         
             
         return redirect()->route('home.index')
-                ->with('info','Ad has been sent to admin for review!');
+                ->with('postinfo','Ad has been sent to admin for review!');
     }
 }

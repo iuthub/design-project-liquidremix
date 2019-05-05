@@ -3,4 +3,3 @@
     <h6 class="motto">Find anything, sell anything.</h6>
 </div>
 <span class="bar"></span>
-
