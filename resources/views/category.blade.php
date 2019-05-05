@@ -97,7 +97,7 @@
 
           <h2 class="">Top Advertisement</h2><br>
           @foreach ($posts as $post)
-            <a href="#" class="card mb-3 boxing" style="max-width: 740px;">
+            <a href="{{route('post.get',['id'=>$post->id])}}" class="card mb-3 boxing" style="max-width: 740px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
                   <img src="/storage/files/{{$post->photos->first()->url  }}" class="card-img img-product" alt="...">
