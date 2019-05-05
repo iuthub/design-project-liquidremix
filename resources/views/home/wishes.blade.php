@@ -11,7 +11,7 @@
                 
                 <h2 class="">Liked products</h2>
                 <p>here you can know what you were looking for</p>
-                @foreach ($likes as $like)
+                @foreach ($posts as $post)
                   <div class="card mb-3 boxing" style="max-width: 740px;">
                     <div class="row no-gutters">
                       <div class="col-md-4">

@@ -14,8 +14,4 @@ class Like extends Model
     {
         return $this->belongsTo('App\Post', 'post_id');
     }
-    public function getpid()
-    {
-    	return $this->post_id;
-    }
 }
