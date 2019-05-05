@@ -60,10 +60,11 @@
           <img class="card-img-top" src="/storage/files/{{$post->photos->first()->url}}" alt="Card image" style="width:100%">
           <div class="card-body card-content ">
             <h4 class="card-title">{{ $post->title }}<span id="value-product"><i class="fas fa-check-circle"></i></span></h4>
-            <p class="card-text">{{  Str::limit($post->description, 70, ' (...)') }}</p>
+            <p class="card-text">{{  Str::limit($post->description, 100,' (...)') }}</p>
             <p class="card-text"><span>{{$post->price}}</span></p>
             <a href="{{route('post.get',['id'=>$post->id])}}" class="btn btn-primary">View Product</a><i class="fas fa-cart-plus icons"></i>
           </div>
+           
         </div>
           @endforeach
       </div>
@@ -86,23 +87,23 @@
                     <img src="http://www.raincloudmagic.com/wp-content/uploads/2011/09/propsheader-1000x300.jpg"
                         class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h5>Storm Rain Cloud Server</h5>
+                        <p>ap into highly customizable cloud computing capacity and scale up or down based on real-time demands, and enjoy the flexibility of securing VMs on a yearly subscription or pay on demand. Now you can focus on your business priorities and free yourself from procuring expensive IT infrastructure and hiring large network teams</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://www.catbirdnyc.com/media/catalog/category/2018_Categories-Fragrance2-1000x300.jpg"
                         class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>Get it today with 50% off Sale!</h5>
+                        <p>Light Blue Perfume by Dolce & Gabbana, Light Blue is an aroma anchored in flower notes and fruity aromas, perfect for women looking to freshen their scent and arouse the apple of their eye. </p>
                     </div>
                 </div>
                 <div class="carousel-item">
                 <img src="{{asset('img/ads.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h5>Would you like to Create your own Ads! harry up!</h5>
+                        <p></p>
                     </div>
                 </div>
             </div>
